@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>DINER</title>
+    <link rel="stylesheet" href="../../css/w3.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/8c9171bec9.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/assets/Portfolio Icon.jfif">
+
+    <meta name="keywords" content="avatar, head avatars, computer vision, paper, research"/>
+</head>
+<body>
+<br/>
+<br/>
+<div class="w3-container" id="paper">
+    <div class="w3-content" style="max-width:850px">
+        <h2 align="center" id="title"><b>Joker: Conditional 3D Head Synthesis with Extreme Facial Expressions</b></h2>
+        <br/>
+
+        <p align="center" class="center_text" id="authors">
+            <a target="_blank" href="https://malteprinzler.github.io/">Malte Prinzler</a><sup>1,2</sup>
+            &nbsp;&nbsp;
+            <a target="_blank" href="https://egorzakharov.github.io/">Egor Zakharov</a><sup>3</sup>
+            &nbsp;&nbsp;
+            <a target="_blank" href="https://vanessik.github.io/">Vanessa Sklyarova</a><sup>1,2</sup>
+            &nbsp;&nbsp;
+            <a target="_blank" href="https://bernakabadayi.github.io/">Berna Kabadyi</a><sup>1</sup>
+            &nbsp;&nbsp;
+            <a target="_blank" href="https://justusthies.github.io/">Justus Thies</a><sup>1,4</sup>
+            &nbsp;&nbsp;
+        </p>
+
+        <p class="center_text" align="center">
+            <sup>1</sup>Max Planck Institute for Intelligent Systems, Tübingen, Germany
+            <br>
+            <sup>2</sup>Max Planck ETH Center for Learning Systems
+            &nbsp;&nbsp;<br>
+            <sup>3</sup>ETH Zürich
+            &nbsp;&nbsp;<br>
+            <sup>4</sup>Technical University of Darmstadt
+            &nbsp;&nbsp;<br>
+
+        </p>
+        <br>
+        <p align="center">
+            <a href="https://arxiv.org/abs/2211.16630" target="__blank" class="btn btn-outline-primary btn-lg mx-3"><i
+                    class="fa-regular fa-file-pdf"></i> Paper</a>
+
+            <a
+               class="btn btn-outline-secondary btn-lg mx-3" ><i class="fa-brands fa-github fa-l"
+                                                              data-tippy-content="GitHub" ></i> Code (Coming Soon)</a>
+        </p>
+        <br>
+        <br>
+        <h3 class="w3-left-align" id="intro"><b>Video</b></h3>
+        <p>
+            <video width="850" height="480" controls>
+                <source src="DINER_YOUTUBE.mp4" type="video/mp4">
+            </video>
+            <!--                     <iframe width="850" height="480" src="DINER_YOUTUBE.mp4" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+            <!-- <iframe width="850" height="480" src="https://www.youtube.com/embed/I17GbCCoytk" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+        <p/>
+
+        <!--                <p class="center_text font-weight-bold" align="center">
+                            Accepted to CVPR 2022
+                        </p>
+        -->
+        <br>
+        <br>
+
+        <h3 class="w3-left-align" id="intro"><b>Abstract</b></h3>
+        <p class="w3-justify font-italic">
+            We introduce Joker, a new method for the conditional synthesis of 3D human heads with extreme expressions. Given a single reference image of a person, we synthesize a volumetric human head with the reference’s identity and a new expression. We offer control over the expression via a 3D morphable model (3DMM) and textual inputs. This multi-modal conditioning signal is essential since 3DMMs alone fail to define subtle emotional changes and extreme expressions, including those involving the mouth cavity and tongue articulation. Our method is built upon a 2D diffusion-based prior that generalizes well to out-of-domain samples, such as sculptures, heavy makeup, and paintings while achieving high levels of expressiveness. To improve view consistency, we propose a new 3D distillation technique that converts predictions of our 2D prior into a neural radiance field (NeRF). Both the 2D prior and our distillation technique produce state-of-the-art results, which are confirmed by our extensive evaluations. Also, to the best of our knowledge, our method is the first to achieve view-consistent extreme tongue articulation.
+        </p>
+        <br>
+
+        <h3 class="w3-left-align" id="publication"><b>Paper</b></h3>
+        (<a href="DINER_arxiv.pdf" target="__blank">PDF</a>)
+        <center>
+            <a href="DINER_arxiv.pdf" target="__blank"><img src="preview.jpg" style="max-width:80%"/></a>
+        </center>
+        <br>
+        <h3 class="w3-left-align" id="cite"><b>Cite</b></h3>
+        <pre class="w3-panel w3-leftbar w3-light-grey"
+             style="white-space: pre-wrap; font-family: monospace; font-size: 12px">
+            @inproceedings{prinzler2024joker,
+                title={Joker: Conditional 3D Head Synthesis with Extreme Facial Expressions},
+                author={Prinzler, Malte and Zakharov, Egor and Sklyarova, Vanessa and Kabadayi, Berna and Thies, Justus},
+                booktitle = {arXiv},
+                year = {2024}
+            }            
+                </pre>
+    </div>
+</div>
+<br/>
+<br/>
+</body>
+</html>
