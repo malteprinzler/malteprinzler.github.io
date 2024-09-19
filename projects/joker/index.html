@@ -1,106 +1,430 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Joker</title>
-    <link rel="stylesheet" href="../../css/w3.css">
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-          crossorigin="anonymous">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-55V1E709SK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    <script src="https://kit.fontawesome.com/8c9171bec9.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="/assets/Portfolio Icon.jfif">
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-    <meta name="keywords" content="avatar, head avatars, computer vision, paper, research"/>
+        gtag('js', new Date());
+
+        gtag('config', 'G-55V1E709SK');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Joker: Conditional 3D Head Synthesis with Extreme Facial Expressions.">
+    <meta name="keywords" content="avatar, head avatars, computer vision, paper, diffusion, research"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joker
+    </title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css"/>
+
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+
 </head>
+
 <body>
-<br/>
-<br/>
-<div class="w3-container" id="paper">
-    <div class="w3-content" style="max-width:850px">
-        <h2 align="center" id="title"><b>Joker: Conditional 3D Head Synthesis with Extreme Facial Expressions</b></h2>
-        <br/>
 
-        <p align="center" class="center_text" id="authors">
-            <a target="_blank" href="https://malteprinzler.github.io/">Malte Prinzler</a><sup>1,2</sup>
-            &nbsp;&nbsp;
-            <a target="_blank" href="https://egorzakharov.github.io/">Egor Zakharov</a><sup>3</sup>
-            &nbsp;&nbsp;
-            <a target="_blank" href="https://vanessik.github.io/">Vanessa Sklyarova</a><sup>1,2</sup>
-            &nbsp;&nbsp;
-            <a target="_blank" href="https://bernakabadayi.github.io/">Berna Kabadyi</a><sup>1</sup>
-            &nbsp;&nbsp;
-            <a target="_blank" href="https://justusthies.github.io/">Justus Thies</a><sup>1,4</sup>
-            &nbsp;&nbsp;
-        </p>
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <img src="static/images/joker_logo.jpg" style="height:180px"></img>
+                    <h1 class="title is-1 publication-title">
+                        <span style="font-weight: bolder;background: linear-gradient(to right, #ff0000, #131f67); -webkit-text-fill-color: transparent; -webkit-background-clip: text;">Joker</span>:
+                        Conditional 3D Head Synthesis with Extreme Facial Expressions</h1>
+                    <div class="is-size-5 publication-authors">
+              <span class="author-block">  
+                <a target="_blank" href="https://malteprinzler.github.io/">Malte Prinzler</a><sup>1,2</sup>,</span>
+                        <span class="author-block">
+                <a target="_blank" href="https://egorzakharov.github.io/">Egor Zakharov</a><sup>3</sup>,</span>
+                        <span class="author-block">
+                <a target="_blank" href="https://vanessik.github.io/">Vanessa Sklyarova</a><sup>1,2</sup>,</span>
+                        <span class="author-block">
+                <a target="_blank" href="https://bernakabadayi.github.io/">Berna Kabadayi</a><sup>1</sup>,</span>
+                        <span class="author-block">
+                <a target="_blank" href="https://justusthies.github.io/">Justus Thies</a><sup>1,4</sup>,</span>
+                    </div>
 
-        <p class="center_text" align="center">
-            <sup>1</sup>Max Planck Institute for Intelligent Systems, Tübingen, Germany
-            <br>
-            <sup>2</sup>Max Planck ETH Center for Learning Systems
-            &nbsp;&nbsp;<br>
-            <sup>3</sup>ETH Zürich
-            &nbsp;&nbsp;<br>
-            <sup>4</sup>Technical University of Darmstadt
-            &nbsp;&nbsp;<br>
+                    <div class="subtitle is-size-5" style="margin: 0px">
+                        <sup>1</sup> Max Planck Institute for Intelligent Systems, Tübingen, Germany <br>
+                        <sup>2</sup> Max Planck ETH Center for Learning Systems <br>
+                        <sup>3</sup> ETH Zürich &nbsp;
+                        <sup>4</sup> Technical University of Darmstadt<br>
+                    </div>
 
-        </p>
-        <br>
-        <p align="center">
-            <a href="https://arxiv.org/abs/2211.16630" target="__blank" class="btn btn-outline-primary btn-lg mx-3"><i
-                    class="fa-regular fa-file-pdf"></i> Paper</a>
+                    <!-- TODO: update paper link -->
+                    <div class="column has-text-centered">
+                        <!-- <div class="publication-links"> -->
+                        <!-- PDF Link. -->
+                        <span class="link-block">
+              <a href="./static/pdf/Joker_ArXiv.pdf" target="_blank"
+                 class="external-link button is-normal is-rounded is-dark">
+<!--                <i class="fa-solid fa-file-pdf"></i>-->
+                <span>Paper</span>
+              </a>
+            </span>
+                        <!-- Code Link. -->
+                        <span class="link-block">
+                <a
+                        class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                </a>
+              </span>
+                        <span class="link-block">
+                <a href="mailto:malte.prinzler@tuebingen.mpg.de"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-envelope"></i>
+                  </span>
+                  <span>Mail</span>
+                </a>
+              </span>
 
-            <a
-               class="btn btn-outline-secondary btn-lg mx-3" ><i class="fa-brands fa-github fa-l"
-                                                              data-tippy-content="GitHub" ></i> Code (Coming Soon)</a>
-        </p>
-        <br>
-        <br>
-        <h3 class="w3-left-align" id="intro"><b>Video</b></h3>
-        <p>
-            <video width="850" height="480" controls>
-                <source src="DINER_YOUTUBE.mp4" type="video/mp4">
-            </video>
-            <!--                     <iframe width="850" height="480" src="DINER_YOUTUBE.mp4" frameborder="0"
-                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    </div>
 
-            <!-- <iframe width="850" height="480" src="https://www.youtube.com/embed/I17GbCCoytk" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-        <p/>
 
-        <!--                <p class="center_text font-weight-bold" align="center">
-                            Accepted to CVPR 2022
-                        </p>
-        -->
-        <br>
-        <br>
+                </div>
 
-        <h3 class="w3-left-align" id="intro"><b>Abstract</b></h3>
-        <p class="w3-justify font-italic">
-            We introduce Joker, a new method for the conditional synthesis of 3D human heads with extreme expressions. Given a single reference image of a person, we synthesize a volumetric human head with the reference’s identity and a new expression. We offer control over the expression via a 3D morphable model (3DMM) and textual inputs. This multi-modal conditioning signal is essential since 3DMMs alone fail to define subtle emotional changes and extreme expressions, including those involving the mouth cavity and tongue articulation. Our method is built upon a 2D diffusion-based prior that generalizes well to out-of-domain samples, such as sculptures, heavy makeup, and paintings while achieving high levels of expressiveness. To improve view consistency, we propose a new 3D distillation technique that converts predictions of our 2D prior into a neural radiance field (NeRF). Both the 2D prior and our distillation technique produce state-of-the-art results, which are confirmed by our extensive evaluations. Also, to the best of our knowledge, our method is the first to achieve view-consistent extreme tongue articulation.
-        </p>
-        <br>
-
-        <h3 class="w3-left-align" id="publication"><b>Paper</b></h3>
-        (<a href="DINER_arxiv.pdf" target="__blank">PDF</a>)
-        <center>
-            <a href="DINER_arxiv.pdf" target="__blank"><img src="preview.jpg" style="max-width:80%"/></a>
-        </center>
-        <br>
-        <h3 class="w3-left-align" id="cite"><b>Cite</b></h3>
-        <pre class="w3-panel w3-leftbar w3-light-grey"
-             style="white-space: pre-wrap; font-family: monospace; font-size: 12px">
-            @inproceedings{prinzler2024joker,
-                title={Joker: Conditional 3D Head Synthesis with Extreme Facial Expressions},
-                author={Prinzler, Malte and Zakharov, Egor and Sklyarova, Vanessa and Kabadayi, Berna and Thies, Justus},
-                booktitle = {arXiv},
-                year = {2024}
-            }            
-                </pre>
+            </div>
+        </div>
     </div>
-</div>
-<br/>
-<br/>
+    </div>
+    </div>
+</section>
+
+<!--Text Control Carousel-->
+<section class="hero is-light is-small" style="width: 70vw; margin-left: auto; margin-right: auto;">
+    <div class="hero-body">
+        <div class="container">
+            <div id="results-carousel" class=" carousel results-carousel">
+                <div class="item item-family">
+                    <center>
+                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">
+                            <source src="./static/videos/text_control_videos_teaser.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </center>
+                </div>
+                <div class="item item-barn">
+                    <center>
+                        <video poster="" id="barn" autoplay muted loop playsinline height="100%">
+                            <source src="./static/videos/text_control_videos_13_15.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </center>
+                </div>
+
+                <div class="item item-ignatius">
+                    <center>
+                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">
+                            <source src="./static/videos/text_control_videos_24_25.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </center>
+                </div>
+                <div class="item item-ignatius">
+                    <center>
+                        <video poster="" id="family" autoplay muted loop playsinline height="100%">
+                            <source src="./static/videos/text_control_videos_0_1.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </center>
+                </div>
+            </div>
+            <div class="has-text-centered">
+                <p><span
+                        style="font-weight: bolder;background: linear-gradient(to right, #ff0000, #131f67); -webkit-text-fill-color: transparent; -webkit-background-clip: text;">Joker</span>
+                    uses one reference image to generate a 3D reconstruction with a novel extreme expression.
+                    The target expression is defined through 3DMM parameters and text prompts.
+                    The text prompts effectively resolve ambiguities in the 3DMM input and can control emotion-related
+                    expression subtleties and tongue articulation.</p></div>
+        </div>
+    </div>
+</section>
+
+<!--Abstract-->
+<section class="section">
+    <div class="container is-max-desktop">
+        <!--/ Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3"> <span
+                        style="color: #000000 ;font-weight: bolder;">Abstract</span></h2>
+                <div class="content has-text-justified">
+                    <i>
+                        We introduce Joker, a new method for the conditional synthesis of 3D human heads with extreme
+                        expressions. Given a single reference image of a person, we synthesize a volumetric human head
+                        with the reference’s identity and a new expression. We offer control over the expression via a
+                        3D morphable model (3DMM) and textual inputs. This multi-modal conditioning signal is essential
+                        since 3DMMs alone fail to define subtle emotional changes and extreme expressions, including
+                        those involving the mouth cavity and tongue articulation. Our method is built upon a 2D
+                        diffusion-based prior that generalizes well to out-of-domain samples, such as sculptures, heavy
+                        makeup, and paintings while achieving high levels of expressiveness. To improve view
+                        consistency, we propose a new 3D distillation technique that converts predictions of our 2D
+                        prior into a neural radiance field (NeRF). Both the 2D prior and our distillation technique
+                        produce state-of-the-art results, which are confirmed by our extensive evaluations. Also, to the
+                        best of our knowledge, our method is the first to achieve view-consistent extreme tongue
+                        articulation.
+                    </i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+
+<!--Video-->
+<section style="padding: 0;margin-top: -25px;" class="section hero">
+    <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered" style="margin-bottom: 0"> <span
+                style="color: #000000 ;font-weight: bolder;">Video</span></h2>
+        <div class="item">
+            <div class="column-video"
+                 style="border-radius:10px;justify-content: center;align-items: center; font-size: 100px;">
+                <!--              <iframe width="960" height="540" src="https://www.youtube.com/embed/WGIEmu9eXmU" src="" class="frame" frameborder="0" allowfullscreen></iframe>-->
+                <video width="960" height="540" controls poster="static/images/video_poster.jpg">
+                    <source src="static/videos/video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Baseline Comparisons-->
+<!--<section style="padding: 0;margin-top: -25px;" class="section hero">-->
+<!--    <div class="container is-max-desktop">-->
+<!--        <h2 class="title is-3 has-text-centered" style="margin-bottom: 0"> <span-->
+<!--                        style="color: #000000 ;font-weight: bolder;">Video</span></h2>-->
+<!--        <div class="item">-->
+<!--            <div id="results-carousel" class=" carousel results-carousel">-->
+<!--                <div class="item item-family">-->
+<!--                    <center>-->
+<!--                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">-->
+<!--                            <source src="./static/videos/comparison_videos/sr_0.mp4"-->
+<!--                                    type="video/mp4">-->
+<!--                        </video>-->
+<!--                    </center>-->
+<!--                </div>-->
+<!--                <div class="item item-barn">-->
+<!--                    <center>-->
+<!--                        <video poster="" id="barn" autoplay muted loop playsinline height="100%">-->
+<!--                            <source src="./static/videos/comparison_videos/sr_1.mp4"-->
+<!--                                    type="video/mp4">-->
+<!--                        </video>-->
+<!--                    </center>-->
+<!--                </div>-->
+
+<!--                <div class="item item-ignatius">-->
+<!--                    <center>-->
+<!--                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">-->
+<!--                            <source src="./static/videos/comparison_videos/cr_0.mp4"-->
+<!--                                    type="video/mp4">-->
+<!--                        </video>-->
+<!--                    </center>-->
+<!--                </div>-->
+<!--                <div class="item item-ignatius">-->
+<!--                    <center>-->
+<!--                        <video poster="" id="family" autoplay muted loop playsinline height="100%">-->
+<!--                            <source src="./static/videos/comparison_videos/cr_1.mp4"-->
+<!--                                    type="video/mp4">-->
+<!--                        </video>-->
+<!--                    </center>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<br>
+
+<!--Baseline Comparisons-->
+<section class="hero is-small" style="width: 70vw; margin-left: auto; margin-right: auto;">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title is-3 has-text-centered" style="margin-bottom: 0"> <span
+                    style="color: #000000 ;font-weight: bolder;">Baseline Comparisons</span></h2>
+            <div id="results-carousel" class=" carousel results-carousel">
+                <div class="item item-family">
+                    <center>
+                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">
+                            <source src="./static/videos/comparison_videos/sr_0.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </center>
+                </div>
+                <div class="item item-barn">
+                    <center>
+                        <video poster="" id="barn" autoplay muted loop playsinline height="100%">
+                            <source src="./static/videos/comparison_videos/sr_1.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </center>
+                </div>
+
+                <div class="item item-ignatius">
+                    <center>
+                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">
+                            <source src="./static/videos/comparison_videos/cr_0.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </center>
+                </div>
+                <div class="item item-ignatius">
+                    <center>
+                        <video poster="" id="family" autoplay muted loop playsinline height="100%">
+                            <source src="./static/videos/comparison_videos/cr_1.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--OOD Examples-->
+<section class="hero is-small" style="width: 70vw; margin-left: auto; margin-right: auto;">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title is-3 has-text-centered"> <span
+                    style="color: #000000 ;font-weight: bolder;">Out-of-Distribution Results</span></h2>
+            <div id="results-carousel-3" class=" carousel results-carousel">
+                <div class="item item-family">
+                    <center>
+                        <img src="./static/videos/ood_samples/ref_14.png" class="top-image">
+                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">
+                            <source src="./static/videos/ood_samples/smallsweep_14.avi.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </center>
+                </div>
+                <div class="item item-barn">
+                    <center>
+                        <img src="./static/videos/ood_samples/ref_17.png" class="top-image">
+                        <video poster="" id="barn" autoplay muted loop playsinline height="100%">
+                            <source src="./static/videos/ood_samples/smallsweep_17.avi.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </center>
+                </div>
+
+                <div class="item item-ignatius">
+                    <center>
+                        <img src="./static/videos/ood_samples/ref_24.png" class="top-image">
+                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">
+                            <source src="./static/videos/ood_samples/smallsweep_24.avi.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </center>
+                </div>
+                <div class="item item-ignatius">
+                    <center>
+                        <img src="./static/videos/ood_samples/ref_idk.png" class="top-image">
+                        <video poster="" id="family" autoplay muted loop playsinline height="100%">
+                            <source src="./static/videos/ood_samples/smallsweep_30.avi.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </center>
+                </div>
+                <div class="item item-ignatius">
+                    <center>
+                        <img src="./static/videos/ood_samples/ref_32.png" class="top-image">
+                        <video poster="" id="family" autoplay muted loop playsinline height="100%">
+                            <source src="./static/videos/ood_samples/smallsweep_32.avi.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Paper-->
+<section class="hero is-small" style="width: 70vw; margin-left: auto; margin-right: auto;">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title is-3 has-text-centered" style="margin-bottom: 0"> <span
+                    style="color: #000000 ;font-weight: bolder;">Paper</span></h2>
+            <a href="./static/pdf/Joker_ArXiv.pdf" target="_blank">
+                <img src="./static/images/paper_preview.jpg">
+            </a>
+        </div>
+    </div>
+</section>
+
+<!--BibTex-->
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+
+        <pre><code>
+  @article{prinzler2024joker,
+    title={Joker: Conditional 3D Head Synthesis with Extreme Facial Expressions,
+    author={Prinzler, Malte and Zakharov, Egor and Sklyarova, Vanessa and Kabadayi, Berna and Thies, Justus},
+    journal={arXiv preprint},
+    year={2024}
+  }
+</code></pre>
+    </div>
+</section>
+
+
+<!-- TODO: update the arxiv link and github -->
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <!-- <a class="icon-link" href="">
+              <i class="fas fa-file-pdf"></i>
+            </a> -->
+            <!-- <a class="icon-link" href="" class="external-link" disabled>
+              <i class="fab fa-github"></i> -->
+            </a>
+        </div>
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        This project page is inspired by <a href="https://drexubery.github.io/ViewCrafter/">ViewCrafter</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+<script src="./static/js/bulma_carousel.js"></script>
 </body>
 </html>
