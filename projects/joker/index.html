@@ -51,49 +51,47 @@
 </head>
 
 <body>
-
-<section class="hero">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-                <div class="column has-text-centered">
-                    <img src="static/images/joker_logo.jpg" style="height:180px"></img>
-                    <h1 class="title is-1 publication-title">
-                        <span style="font-weight: bolder;background: linear-gradient(to right, #ff0000, #131f67); -webkit-text-fill-color: transparent; -webkit-background-clip: text;">Joker</span>:
-                        Conditional 3D Head Synthesis with Extreme Facial Expressions</h1>
-                    <div class="is-size-5 publication-authors">
+<div style="width: 960px; margin-left: auto; margin-right: auto; padding-top: 20px">
+    <section>
+        <div class="columns is-centered">
+            <div class="column has-text-centered">
+                <img src="static/images/joker_logo.jpg" style="height:180px"></img>
+                <h1 class="title is-1 publication-title">
+                    <span style="font-weight: bolder;background: linear-gradient(to right, #ff0000, #131f67); -webkit-text-fill-color: transparent; -webkit-background-clip: text;">Joker</span>:
+                    Conditional 3D Head Synthesis with Extreme Facial Expressions</h1>
+                <div class="is-size-5 publication-authors">
               <span class="author-block">  
                 <a target="_blank" href="https://malteprinzler.github.io/">Malte Prinzler</a><sup>1,2</sup>,</span>
-                        <span class="author-block">
+                    <span class="author-block">
                 <a target="_blank" href="https://egorzakharov.github.io/">Egor Zakharov</a><sup>3</sup>,</span>
-                        <span class="author-block">
+                    <span class="author-block">
                 <a target="_blank" href="https://vanessik.github.io/">Vanessa Sklyarova</a><sup>1,2</sup>,</span>
-                        <span class="author-block">
+                    <span class="author-block">
                 <a target="_blank" href="https://bernakabadayi.github.io/">Berna Kabadayi</a><sup>1</sup>,</span>
-                        <span class="author-block">
+                    <span class="author-block">
                 <a target="_blank" href="https://justusthies.github.io/">Justus Thies</a><sup>1,4</sup>,</span>
-                    </div>
+                </div>
 
-                    <div class="subtitle is-size-5" style="margin: 0px">
-                        <sup>1</sup> Max Planck Institute for Intelligent Systems, Tübingen, Germany <br>
-                        <sup>2</sup> Max Planck ETH Center for Learning Systems <br>
-                        <sup>3</sup> ETH Zürich &nbsp;
-                        <sup>4</sup> Technical University of Darmstadt<br>
-                    </div>
+                <div class="subtitle is-size-5" style="margin: 0px">
+                    <sup>1</sup> Max Planck Institute for Intelligent Systems, Tübingen, Germany <br>
+                    <sup>2</sup> Max Planck ETH Center for Learning Systems <br>
+                    <sup>3</sup> ETH Zürich &nbsp;
+                    <sup>4</sup> Technical University of Darmstadt<br>
+                </div>
 
-                    <!-- TODO: update paper link -->
-                    <div class="column has-text-centered">
-                        <!-- <div class="publication-links"> -->
-                        <!-- PDF Link. -->
-                        <span class="link-block">
+                <!-- TODO: update paper link -->
+                <div class="column has-text-centered">
+                    <!-- <div class="publication-links"> -->
+                    <!-- PDF Link. -->
+                    <span class="link-block">
               <a href="./static/pdf/Joker_ArXiv.pdf" target="_blank"
                  class="external-link button is-normal is-rounded is-dark">
 <!--                <i class="fa-solid fa-file-pdf"></i>-->
                 <span>Paper</span>
               </a>
             </span>
-                        <!-- Code Link. -->
-                        <span class="link-block">
+                    <!-- Code Link. -->
+                    <span class="link-block">
                 <a
                         class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -102,7 +100,7 @@
                   <span>Code (coming soon)</span>
                 </a>
               </span>
-                        <span class="link-block">
+                    <span class="link-block">
                 <a href="mailto:malte.prinzler@tuebingen.mpg.de"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -112,574 +110,584 @@
                 </a>
               </span>
 
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <br>
+
+    <!--Text Control Carousel-->
+    <section class="is-light is-small" style="width: 100%; margin-left: auto; margin-right: auto;">
+        <div>
+            <div class="container">
+                <div id="results-carousel" class=" carousel results-carousel">
+                    <div class="item item-family">
+                        <center>
+                            <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/text_control_videos_teaser.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item item-barn">
+                        <center>
+                            <video poster="" id="barn" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/text_control_videos_13_15.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+
+                    <div class="item item-ignatius">
+                        <center>
+                            <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/text_control_videos_24_25.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item item-ignatius">
+                        <center>
+                            <video poster="" id="family" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/text_control_videos_0_1.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
                     </div>
                 </div>
-
+                <div class="has-text-centered">
+                    <p><span
+                            style="font-weight: bolder;background: linear-gradient(to right, #ff0000, #131f67); -webkit-text-fill-color: transparent; -webkit-background-clip: text;">Joker</span>
+                        uses one reference image to generate a 3D reconstruction with a novel extreme expression.
+                        The target expression is defined through 3DMM parameters and text prompts.
+                        The text prompts effectively resolve ambiguities in the 3DMM input and can control
+                        emotion-related
+                        expression subtleties and tongue articulation.</p></div>
             </div>
         </div>
-    </div>
-    </div>
-    </div>
-</section>
+    </section>
 
-<!--Text Control Carousel-->
-<section class="hero is-light is-small" style="width: 70vw; margin-left: auto; margin-right: auto;">
-    <div class="hero-body">
-        <div class="container">
-            <div id="results-carousel" class=" carousel results-carousel">
-                <div class="item item-family">
-                    <center>
-                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/text_control_videos_teaser.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item item-barn">
-                    <center>
-                        <video poster="" id="barn" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/text_control_videos_13_15.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
+    <!--Abstract-->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!--/ Abstract. -->
+            <div class="columns is-centered ">
+                <div class="column">
+                    <h2 class="title is-3 has-text-centered"> <span
+                            style="color: #000000 ;font-weight: bolder;">Abstract</span></h2>
+                    <div class="content has-text-justified" style="padding-left: 50px; padding-right: 50px">
+                        <i>
+                            We introduce Joker, a new method for the conditional synthesis of 3D human heads with
+                            extreme
+                            expressions. Given a single reference image of a person, we synthesize a volumetric human
+                            head
+                            with the reference’s identity and a new expression. We offer control over the expression via
+                            a
+                            3D morphable model (3DMM) and textual inputs. This multi-modal conditioning signal is
+                            essential
+                            since 3DMMs alone fail to define subtle emotional changes and extreme expressions, including
+                            those involving the mouth cavity and tongue articulation. Our method is built upon a 2D
+                            diffusion-based prior that generalizes well to out-of-domain samples, such as sculptures,
+                            heavy
+                            makeup, and paintings while achieving high levels of expressiveness. To improve view
+                            consistency, we propose a new 3D distillation technique that converts predictions of our 2D
+                            prior into a neural radiance field (NeRF). Both the 2D prior and our distillation technique
+                            produce state-of-the-art results, which are confirmed by our extensive evaluations. Also, to
+                            the
+                            best of our knowledge, our method is the first to achieve view-consistent extreme tongue
+                            articulation.
+                        </i>
 
-                <div class="item item-ignatius">
-                    <center>
-                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/text_control_videos_24_25.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item item-ignatius">
-                    <center>
-                        <video poster="" id="family" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/text_control_videos_0_1.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-            </div>
-            <div class="has-text-centered">
-                <p><span
-                        style="font-weight: bolder;background: linear-gradient(to right, #ff0000, #131f67); -webkit-text-fill-color: transparent; -webkit-background-clip: text;">Joker</span>
-                    uses one reference image to generate a 3D reconstruction with a novel extreme expression.
-                    The target expression is defined through 3DMM parameters and text prompts.
-                    The text prompts effectively resolve ambiguities in the 3DMM input and can control emotion-related
-                    expression subtleties and tongue articulation.</p></div>
-        </div>
-    </div>
-</section>
-
-<!--Abstract-->
-<section class="section">
-    <div class="container is-max-desktop">
-        <!--/ Abstract. -->
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3"> <span
-                        style="color: #000000 ;font-weight: bolder;">Abstract</span></h2>
-                <div class="content has-text-justified">
-                    <i>
-                        We introduce Joker, a new method for the conditional synthesis of 3D human heads with extreme
-                        expressions. Given a single reference image of a person, we synthesize a volumetric human head
-                        with the reference’s identity and a new expression. We offer control over the expression via a
-                        3D morphable model (3DMM) and textual inputs. This multi-modal conditioning signal is essential
-                        since 3DMMs alone fail to define subtle emotional changes and extreme expressions, including
-                        those involving the mouth cavity and tongue articulation. Our method is built upon a 2D
-                        diffusion-based prior that generalizes well to out-of-domain samples, such as sculptures, heavy
-                        makeup, and paintings while achieving high levels of expressiveness. To improve view
-                        consistency, we propose a new 3D distillation technique that converts predictions of our 2D
-                        prior into a neural radiance field (NeRF). Both the 2D prior and our distillation technique
-                        produce state-of-the-art results, which are confirmed by our extensive evaluations. Also, to the
-                        best of our knowledge, our method is the first to achieve view-consistent extreme tongue
-                        articulation.
-                    </i>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<br>
-<br>
+    </section>
+    <br>
 
-<!--Video-->
-<section style="padding: 0;margin-top: -25px;" class="section hero">
-    <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered" style="margin-bottom: 0"> <span
-                style="color: #000000 ;font-weight: bolder;">Video</span></h2>
-        <div class="item">
-            <div class="column-video"
-                 style="border-radius:10px;justify-content: center;align-items: center; font-size: 100px;">
-                <!--              <iframe width="960" height="540" src="https://www.youtube.com/embed/WGIEmu9eXmU" src="" class="frame" frameborder="0" allowfullscreen></iframe>-->
-                <video width="960" height="540" controls poster="static/images/video_poster.jpg">
-                    <source src="static/videos/video.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!--Method-->
-<section class="section">
-    <div class="container is-max-desktop">
-        <!--/ Abstract. -->
-        <div class="columns is-centered ">
-            <div class="column">
-                <h2 class="title is-3 has-text-centered"> <span
-                        style="color: #000000 ;font-weight: bolder;">Method</span></h2>
-                <div class="content has-text-justified">
-                    <b>Overview:</b> Our Method consists of 2 components: a 2D Diffusion-Based Prior and a Progressive
-                    3D Distillation
-                    procedure.
-                    The 2D prior predicts images of the reference identity while expression and pose are controlled
-                    through a 3DMM and text prompts.
-                    During the Progressive 3D Distillation, predictions of the 2D prior are used to generate a 3D
-                    reconstruction.
-                    <br>
-                    <img src="./static/images/method.jpg" style="width: 100%">
-                    <br>
-                    <br>
-                    <!--                    <img src="./static/images/method_2d_prior.jpg" alt="2D Prior" class="image-right">-->
-                    <b>2D Diffusion-Based Prior:</b> Our 2D Diffusion-Based Prior consists of 3 components all of which
-                    are constructed as UNets which are initialized from pretrained <a
-                        href="https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5">StableDiffusion
-                    1.5</a> weights.
-                    The Denoising Network takes latent noise and a driving prompt as input and generates the
-                    output images in a standard latent-diffusion denoising process.
-                    The Reference Network takes the reference image as input, encodes it into latent space after which
-                    it is passed through a UNet structure that is identical to the structure of the denoising network.
-                    The keys and values of its self-attention layers are appended to their respective counterparts in
-                    the Denoising Network. In this way appearance features of the reference image are infused into the
-                    the Denoising Network (see <a href="https://github.com/FreedomGu/DiffPortrait3D">DiffPortrait3D</a>
-                    for more details).
-                    The Driving Network is constructed as a <a href="https://github.com/lllyasviel/ControlNet">ControlNet</a>
-                    to control the Denoising Network with
-                    normal map renderings of the 3DMM.
-                    The Reference Network, Driving Network, and the upsampling layers of the Denoising Network are
-                    finetuned on filtered subsets of <a href="https://celebv-text.github.io/">CelebV-Text</a> and <a
-                        href="https://tobias-kirschstein.github.io/nersemble/">NeRSemble</a>.
-
-                    <br>
-                    <br>
-                    <b>Progressive 3D Distillation:</b> During our Progressive 3D Distillation, predictions of the 2D
-                    Prior are used to optimize a 3D reconstruction (NeRF). It is performed in two stages that differ in
-                    how the target images are generated and how frequently they are updated.
-                    <br>
-                    <br>
-                    <img src="./static/images/distillation_stage1.jpg" alt="Progressive 3D Distillation Stage 1"
-                         class="image-right">
-                    <u>Stage 1:</u> In Stage 1, the NeRF is rendered under several views. The renderings are noised
-                    according to discrete noise levels from a DDIM noise schedule and denoised in a single inference
-                    step using the 2D prior. The resulting images are used as targets to optimize the NeRF for several
-                    iterations. This procedure is repeated several times while the amplitude of the applied noise
-                    decreases monotonically.
-                    Stage 1 is interrupted after ~60% of the noise levels and followed by Stage 2.
-                    <br>
-                    <br>
-                    <img src="./static/images/distillation_stage2.jpg" alt="Progressive 3D Distillation Stage 2"
-                         class="image-right">
-                    <u>Stage 2:</u> In Stage 2, we initalize the NeRF from the distillation result of Stage 1. Again the
-                    NeRF is rendered under several views and the renderings are noised. This time, the target images are
-                    predicted in a multi-step DDIM denoising process over the remaining noise levels of the predefined
-                    noise schedule. The NeRF is optimized against the resulting images until convergence. We found that
-                    this 2-staged approach improves view-consistency and synthesis quality of the 3D reconstruction.
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!--Baseline Comparisons-->
-<!--<section style="padding: 0;margin-top: -25px;" class="section hero">-->
-<!--    <div class="container is-max-desktop">-->
-<!--        <h2 class="title is-3 has-text-centered" style="margin-bottom: 0"> <span-->
-<!--                        style="color: #000000 ;font-weight: bolder;">Video</span></h2>-->
-<!--        <div class="item">-->
-<!--            <div id="results-carousel" class=" carousel results-carousel">-->
-<!--                <div class="item item-family">-->
-<!--                    <center>-->
-<!--                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">-->
-<!--                            <source src="./static/videos/comparison_videos/sr_0.mp4"-->
-<!--                                    type="video/mp4">-->
-<!--                        </video>-->
-<!--                    </center>-->
-<!--                </div>-->
-<!--                <div class="item item-barn">-->
-<!--                    <center>-->
-<!--                        <video poster="" id="barn" autoplay muted loop playsinline height="100%">-->
-<!--                            <source src="./static/videos/comparison_videos/sr_1.mp4"-->
-<!--                                    type="video/mp4">-->
-<!--                        </video>-->
-<!--                    </center>-->
-<!--                </div>-->
-
-<!--                <div class="item item-ignatius">-->
-<!--                    <center>-->
-<!--                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">-->
-<!--                            <source src="./static/videos/comparison_videos/cr_0.mp4"-->
-<!--                                    type="video/mp4">-->
-<!--                        </video>-->
-<!--                    </center>-->
-<!--                </div>-->
-<!--                <div class="item item-ignatius">-->
-<!--                    <center>-->
-<!--                        <video poster="" id="family" autoplay muted loop playsinline height="100%">-->
-<!--                            <source src="./static/videos/comparison_videos/cr_1.mp4"-->
-<!--                                    type="video/mp4">-->
-<!--                        </video>-->
-<!--                    </center>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<br>
-
-<!--Baseline Comparisons-->
-<section class="hero is-small" style="width: 70vw; margin-left: auto; margin-right: auto;">
-    <div class="hero-body">
-        <div class="container">
+    <!--Video-->
+    <section style="padding: 0" class="section hero">
+        <div class="container is-max-desktop">
             <h2 class="title is-3 has-text-centered" style="margin-bottom: 0"> <span
-                    style="color: #000000 ;font-weight: bolder;">Baseline Comparisons</span></h2>
-            <div id="results-carousel" class=" carousel results-carousel">
-                <div class="item item-family">
-                    <center>
-                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/comparison_videos/sr_0.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item item-barn">
-                    <center>
-                        <video poster="" id="barn" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/comparison_videos/sr_1.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-
-                <div class="item item-ignatius">
-                    <center>
-                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/comparison_videos/cr_0.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item item-ignatius">
-                    <center>
-                        <video poster="" id="family" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/comparison_videos/cr_1.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
+                    style="color: #000000 ;font-weight: bolder;">Video</span></h2>
+            <div class="item">
+                <div class="column-video"
+                     style="border-radius:10px;justify-content: center;align-items: center; font-size: 100px;">
+                    <!--              <iframe width="960" height="540" src="https://www.youtube.com/embed/WGIEmu9eXmU" src="" class="frame" frameborder="0" allowfullscreen></iframe>-->
+                    <video controls poster="static/images/video_poster.jpg" style="width: 100%">
+                        <source src="static/videos/video.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!--More Results-->
-<section class="hero is-small" style="width: 70vw; margin-left: auto; margin-right: auto;">
-    <div class="hero-body">
-        <div class="container">
-            <h2 class="title is-3 has-text-centered"> <span
-                    style="color: #000000 ;font-weight: bolder;">More Results</span></h2>
-            <div id="results-carousel-4" class=" carousel results-carousel">
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/ood_14.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/ood_smallslowspiral_14.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/ood_17.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/ood_smallslowspiral_17.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/ood_24.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/ood_smallslowspiral_24.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/ood_30.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/ood_smallslowspiral_30.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/ood_32.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/ood_smallslowspiral_32.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/mixedeval_11.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/mixedeval_smallslowspiral_11.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/ood_3.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/ood_smallslowspiral_3.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/joker_26.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/joker_smallslowspiral_26.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/mixedeval_26.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/mixedeval_smallslowspiral_26.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/ood_28.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/ood_smallslowspiral_28.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/joker_4.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/joker_smallslowspiral_4.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/mixedeval_19.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/mixedeval_smallslowspiral_19.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/ood_21.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/ood_smallslowspiral_21.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/joker_6.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/joker_smallslowspiral_6.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/ood_2.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/ood_smallslowspiral_2.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/mixedeval_25.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/mixedeval_smallslowspiral_25.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/joker_31.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/joker_smallslowspiral_31.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/ood_27.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/ood_smallslowspiral_27.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/mixedeval_27.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/mixedeval_smallslowspiral_27.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/joker_16.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/joker_smallslowspiral_16.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/ood_9.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/ood_smallslowspiral_9.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/joker_38.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/joker_smallslowspiral_38.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/ood_22.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/ood_smallslowspiral_22.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/joker_19.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/joker_smallslowspiral_19.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/ood_8.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/ood_smallslowspiral_8.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/joker_36.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/joker_smallslowspiral_36.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
-                <div class="item">
-                    <center>
-                        <img src="./static/videos/more_results/ood_19.jpg" class="top-image">
-                        <video poster="" autoplay muted loop playsinline height="100%">
-                            <source src="./static/videos/more_results/ood_smallslowspiral_19.avi.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </center>
-                </div>
+    </section>
 
 
+    <!--Method-->
+    <br>
+    <section class="section" style="padding: 0">
+        <div class="container is-max-desktop">
+            <!--/ Abstract. -->
+            <div class="columns is-centered ">
+                <div class="column">
+                    <h2 class="title is-3 has-text-centered"> <span
+                            style="color: #000000 ;font-weight: bolder;">Method</span></h2>
+                    <div class="content has-text-justified">
+                        <b>Overview:</b> Our Method consists of 2 components: a 2D Diffusion-Based Prior and a
+                        Progressive
+                        3D Distillation
+                        procedure.
+                        The 2D prior predicts images of the reference identity while expression and pose are controlled
+                        through a 3DMM and text prompts.
+                        During the Progressive 3D Distillation, predictions of the 2D prior are used to generate a 3D
+                        reconstruction.
+                        <br>
+                        <img src="./static/images/method.jpg" style="width: 100%">
+                        <br>
+                        <br>
+                        <!--                    <img src="./static/images/method_2d_prior.jpg" alt="2D Prior" class="image-right">-->
+                        <b>2D Diffusion-Based Prior:</b> Our 2D Diffusion-Based Prior consists of 3 components all of
+                        which
+                        are constructed as UNets which are initialized from pretrained <a
+                            href="https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5">StableDiffusion
+                        1.5</a> weights.
+                        The Denoising Network takes latent noise and a driving prompt as input and generates the
+                        output images in a standard latent-diffusion denoising process.
+                        The Reference Network takes the reference image as input, and passes it through its UNet
+                        structure.
+                        The keys and values of the self-attention layers are appended to their respective counterparts
+                        in the Denoising Network (see <a
+                            href="https://github.com/FreedomGu/DiffPortrait3D">DiffPortrait3D</a>
+                        for more details).
+                        The Driving Network is constructed as a <a href="https://github.com/lllyasviel/ControlNet">ControlNet</a>
+                        to drive the Denoising Network with
+                        normal map renderings of the 3DMM.
+                        <br>
+                        <br>
+                        <b>Progressive 3D Distillation:</b> During our Progressive 3D Distillation, predictions of the
+                        2D
+                        Prior are used to optimize a 3D reconstruction (NeRF). It is performed in two stages that differ
+                        in
+                        how the target images are generated and how frequently they are updated.
+                        <br>
+                        <br>
+                        <img src="./static/images/distillation_stage1.jpg" alt="Progressive 3D Distillation Stage 1"
+                             class="image-right">
+                        <u>Stage 1:</u> In Stage 1, the NeRF is rendered under several views. The renderings are noised
+                        according to discrete noise levels from a DDIM noise schedule and denoised in a single inference
+                        step using the 2D prior. The resulting images are used as targets to optimize the NeRF for
+                        several
+                        iterations. This procedure is repeated several times while the amplitude of the applied noise
+                        decreases monotonically.
+                        Stage 1 is interrupted after ~60% of the noise levels and followed by Stage 2.
+                        <br>
+                        <br>
+                        <img src="./static/images/distillation_stage2.jpg" alt="Progressive 3D Distillation Stage 2"
+                             class="image-right">
+                        <u>Stage 2:</u> In Stage 2, we initalize the NeRF from the distillation result of Stage 1. Again
+                        the
+                        NeRF is rendered under several views and the renderings are noised. This time, the target images
+                        are
+                        predicted in a multi-step DDIM denoising process over the remaining noise levels of the
+                        predefined
+                        noise schedule. The NeRF is optimized against the resulting images until convergence. We found
+                        that
+                        this 2-staged approach improves view-consistency and synthesis quality of the 3D reconstruction.
+
+
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!--Paper-->
-<section class="section">
-    <div class="container is-max-desktop">
-        <!--/ Abstract. -->
-        <div class="columns is-centered ">
-            <div class="column">
+
+    <!--Baseline Comparisons-->
+    <!--<section style="padding: 0;margin-top: -25px;" class="section hero">-->
+    <!--    <div class="container is-max-desktop">-->
+    <!--        <h2 class="title is-3 has-text-centered" style="margin-bottom: 0"> <span-->
+    <!--                        style="color: #000000 ;font-weight: bolder;">Video</span></h2>-->
+    <!--        <div class="item">-->
+    <!--            <div id="results-carousel" class=" carousel results-carousel">-->
+    <!--                <div class="item item-family">-->
+    <!--                    <center>-->
+    <!--                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">-->
+    <!--                            <source src="./static/videos/comparison_videos/sr_0.mp4"-->
+    <!--                                    type="video/mp4">-->
+    <!--                        </video>-->
+    <!--                    </center>-->
+    <!--                </div>-->
+    <!--                <div class="item item-barn">-->
+    <!--                    <center>-->
+    <!--                        <video poster="" id="barn" autoplay muted loop playsinline height="100%">-->
+    <!--                            <source src="./static/videos/comparison_videos/sr_1.mp4"-->
+    <!--                                    type="video/mp4">-->
+    <!--                        </video>-->
+    <!--                    </center>-->
+    <!--                </div>-->
+
+    <!--                <div class="item item-ignatius">-->
+    <!--                    <center>-->
+    <!--                        <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">-->
+    <!--                            <source src="./static/videos/comparison_videos/cr_0.mp4"-->
+    <!--                                    type="video/mp4">-->
+    <!--                        </video>-->
+    <!--                    </center>-->
+    <!--                </div>-->
+    <!--                <div class="item item-ignatius">-->
+    <!--                    <center>-->
+    <!--                        <video poster="" id="family" autoplay muted loop playsinline height="100%">-->
+    <!--                            <source src="./static/videos/comparison_videos/cr_1.mp4"-->
+    <!--                                    type="video/mp4">-->
+    <!--                        </video>-->
+    <!--                    </center>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
+    <br>
+
+    <!--Baseline Comparisons-->
+    <section class="hero is-small" style="padding: 0; margin-left: auto; margin-right: auto;">
+        <div class="hero-body" style="padding: 0">
+            <div class="container">
                 <h2 class="title is-3 has-text-centered" style="margin-bottom: 0"> <span
-                        style="color: #000000 ;font-weight: bolder;">Paper</span></h2>
-                <a href="./static/pdf/Joker_ArXiv.pdf" target="_blank">
-                    <img src="./static/images/paper_preview.jpg">
-                </a>
+                        style="color: #000000 ;font-weight: bolder;">Baseline Comparisons</span></h2>
+                <div id="results-carousel" class=" carousel results-carousel">
+                    <div class="item item-family">
+                        <center>
+                            <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/comparison_videos/sr_0.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item item-barn">
+                        <center>
+                            <video poster="" id="barn" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/comparison_videos/sr_1.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+
+                    <div class="item item-ignatius">
+                        <center>
+                            <video poster="" id="ignatius" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/comparison_videos/cr_0.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item item-ignatius">
+                        <center>
+                            <video poster="" id="family" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/comparison_videos/cr_1.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    <br><br>
+    <!--More Results-->
+    <section class="hero is-small" style="margin-left: auto; margin-right: auto;">
+        <div class="hero-body" style="padding: 0">
+            <div class="container">
+                <h2 class="title is-3 has-text-centered"> <span
+                        style="color: #000000 ;font-weight: bolder;">More Results</span></h2>
+                <div id="results-carousel-4" class=" carousel results-carousel">
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/ood_14.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/ood_smallslowspiral_14.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/ood_17.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/ood_smallslowspiral_17.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
 
-<!--BibTex-->
-<section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-        <h2 class="title">BibTeX</h2>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/ood_24.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/ood_smallslowspiral_24.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/ood_30.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/ood_smallslowspiral_30.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/ood_32.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/ood_smallslowspiral_32.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
 
-        <pre><code>
-  @article{prinzler2024joker,
-    title={Joker: Conditional 3D Head Synthesis with Extreme Facial Expressions,
-    author={Prinzler, Malte and Zakharov, Egor and Sklyarova, Vanessa and Kabadayi, Berna and Thies, Justus},
-    journal={arXiv preprint},
-    year={2024}
-  }
-</code></pre>
-    </div>
-</section>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/mixedeval_11.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/mixedeval_smallslowspiral_11.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/ood_3.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/ood_smallslowspiral_3.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/joker_26.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/joker_smallslowspiral_26.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/mixedeval_26.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/mixedeval_smallslowspiral_26.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/ood_28.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/ood_smallslowspiral_28.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/joker_4.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/joker_smallslowspiral_4.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/mixedeval_19.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/mixedeval_smallslowspiral_19.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/ood_21.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/ood_smallslowspiral_21.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/joker_6.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/joker_smallslowspiral_6.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/ood_2.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/ood_smallslowspiral_2.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/mixedeval_25.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/mixedeval_smallslowspiral_25.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/joker_31.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/joker_smallslowspiral_31.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/ood_27.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/ood_smallslowspiral_27.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/mixedeval_27.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/mixedeval_smallslowspiral_27.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/joker_16.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/joker_smallslowspiral_16.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/ood_9.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/ood_smallslowspiral_9.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/joker_38.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/joker_smallslowspiral_38.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/ood_22.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/ood_smallslowspiral_22.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/joker_19.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/joker_smallslowspiral_19.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/ood_8.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/ood_smallslowspiral_8.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/joker_36.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/joker_smallslowspiral_36.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="./static/videos/more_results/ood_19.jpg" class="top-image">
+                            <video poster="" autoplay muted loop playsinline height="100%">
+                                <source src="./static/videos/more_results/ood_smallslowspiral_19.avi.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </center>
+                    </div>
 
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Paper-->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!--/ Abstract. -->
+            <div class="columns is-centered ">
+                <div class="column">
+                    <h2 class="title is-3 has-text-centered" style="margin-bottom: 0"> <span
+                            style="color: #000000 ;font-weight: bolder;">Paper</span></h2>
+                    <a href="./static/pdf/Joker_ArXiv.pdf" target="_blank">
+                        <img src="./static/images/paper_preview.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--BibTex-->
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+
+            <pre><code>
+          @article{prinzler2024joker,
+            title={Joker: Conditional 3D Head Synthesis with Extreme Facial Expressions,
+            author={Prinzler, Malte and Zakharov, Egor and Sklyarova, Vanessa and Kabadayi, Berna and Thies, Justus},
+            journal={arXiv preprint},
+            year={2024}
+          }
+        </code></pre>
+        </div>
+    </section>
+</div>
 
 <!-- TODO: update the arxiv link and github -->
-<footer class="footer">
+<footer class="footer" style="min-width: 960px">
     <div class="container">
         <div class="content has-text-centered">
             <!-- <a class="icon-link" href="">

@@ -7,13 +7,13 @@ from PIL import Image, ImageDraw, ImageFont
 import ffmpeg
 import matplotlib.pyplot as plt
 
-ref_img = Image.open("/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/VIDEO/textcontrol/ref_0_1.png")
-control_img = Image.open("/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/VIDEO/textcontrol/normal_0_1.png")
-video_1_path = "/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/VIDEO/textcontrol/horizontalsweep_0.avi"
-video_2_path = "/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/VIDEO/textcontrol/horizontalsweep_1.avi"
-text_1 = "Prompt: \"A woman with her tongue sticking out\""
-text_2 = "Prompt: \"A woman with a big smile\""
-out_path = "/home/mprinzler/Projects/webpage/malteprinzler.github.io/projects/joker/static/videos/text_control_videos_0_1.mp4"
+# ref_img = Image.open("/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/VIDEO/textcontrol/ref_0_1.png")
+# control_img = Image.open("/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/VIDEO/textcontrol/normal_0_1.png")
+# video_1_path = "/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/VIDEO/textcontrol/horizontalsweep_0.avi"
+# video_2_path = "/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/VIDEO/textcontrol/horizontalsweep_1.avi"
+# text_1 = "Prompt: \"A woman with her tongue sticking out\""
+# text_2 = "Prompt: \"A woman with a big smile\""
+# out_path = "/home/mprinzler/Projects/webpage/malteprinzler.github.io/projects/joker/static/videos/text_control_videos_0_1.mp4"
 
 # ref_img = Image.open("/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/VIDEO/textcontrol/ref_13_15.png")
 # control_img = Image.open("/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/VIDEO/textcontrol/normal_13_15.png")
@@ -31,13 +31,13 @@ out_path = "/home/mprinzler/Projects/webpage/malteprinzler.github.io/projects/jo
 # text_2 = "Prompt: \"A man with an angry face\""
 # out_path = "/home/mprinzler/Projects/webpage/malteprinzler.github.io/projects/joker/static/videos/text_control_videos_24_25.mp4"
 
-# ref_img = Image.open("/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/PAPER/FIGURES/Teaser/new_joker_imgs/ref_img.jpg")
-# control_img = Image.open("/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/PAPER/FIGURES/Teaser/new_joker_imgs/cam_190.jpg")
-# video_1_path = "/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/VIDEO/videos/joker_angry_teaser.avi"
-# video_2_path = "/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/VIDEO/videos/joker_tongue_out_teaser.avi"
-# text_1 = "Prompt: \"A man with an angry expression\""
-# text_2 = "Prompt: \"A man with his tongue sticking out\""
-# out_path = "/home/mprinzler/Projects/webpage/malteprinzler.github.io/projects/joker/static/videos/text_control_videos_teaser.mp4"
+ref_img = Image.open("/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/PAPER/FIGURES/Teaser/new_joker_imgs/ref_img.jpg")
+control_img = Image.open("/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/PAPER/FIGURES/Teaser/new_joker_imgs/cam_190.jpg")
+video_1_path = "/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/VIDEO/videos/joker_angry_teaser.avi"
+video_2_path = "/home/mprinzler/MINIMAL_TRANSFER_FILES/Joker/Code/VIDEO/videos/joker_tongue_out_teaser.avi"
+text_1 = "Prompt: \"A man with an angry expression\""
+text_2 = "Prompt: \"A man with his tongue sticking out\""
+out_path = "/home/mprinzler/Projects/webpage/malteprinzler.github.io/projects/joker/static/videos/text_control_videos_teaser.mp4"
 
 
 tmp_out_path = "/tmp/text_control_videos"
@@ -84,8 +84,8 @@ def draw_textbox_on_img(img, text, font, xy, halign, valign, textfill, bbxfill, 
 
 
 # adding labels to images
-ref_img = draw_textbox_on_img(ref_img, "Reference Image", font=fnt, xy=(ref_img.width / 2, ref_img.height - 5),
-                              halign="center", valign="bottom", textfill="white", bbxfill=(0, 0, 0, 118),
+ref_img = draw_textbox_on_img(ref_img, "Reference Image", font=fnt, xy=(ref_img.width / 2, 5),
+                              halign="center", valign="top", textfill="white", bbxfill=(0, 0, 0, 118),
                               bbxpad=4).convert("RGB")
 control_img = draw_textbox_on_img(control_img, "3DMM Control", font=fnt, xy=(ref_img.width / 2, ref_img.height - 5),
                                   halign="center", valign="bottom", textfill="white", bbxfill=(0, 0, 0, 118),
@@ -108,12 +108,12 @@ for i in tqdm.tqdm(range(nframes)):
         dtype=np.uint8) + 255
     canvas_height, canvas_width, _ = out_canvas.shape
     captioned_frame1 = draw_textbox_on_img(Image.fromarray(frames1[i]), text_1, font=prompt_fnt,
-                                           xy=(frames1[i].shape[1] / 2, 10), halign="center",
-                                           valign="top", textfill="white", bbxfill=(0, 0, 0, 118), bbxpad=4).convert(
+                                           xy=(frames1[i].shape[1] / 2, frames1[i].shape[0] - 10), halign="center",
+                                           valign="bottom", textfill="white", bbxfill=(0, 0, 0, 118), bbxpad=4).convert(
         "RGB")
     captioned_frame2 = draw_textbox_on_img(Image.fromarray(frames2[i]), text_2, font=prompt_fnt,
-                                           xy=(frames2[i].shape[1] / 2, 10), halign="center",
-                                           valign="top", textfill="white", bbxfill=(0, 0, 0, 118), bbxpad=4).convert(
+                                           xy=(frames2[i].shape[1] / 2, frames2[i].shape[0] - 10), halign="center",
+                                           valign="bottom", textfill="white", bbxfill=(0, 0, 0, 118), bbxpad=4).convert(
         "RGB")
 
     out_canvas[:ref_img.height, :ref_img.width] = np.array(ref_img)
