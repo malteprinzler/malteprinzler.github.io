@@ -27,9 +27,10 @@ bulmaCarousel.attach('#results-carousel', {
             autoplay: false,
             pagination: false,
         });
-bulmaCarousel.attach('#results-carousel-3', {
-            slidesToScroll: 1,
-            slidesToShow: 3,
+bulmaCarousel.attach('#results-carousel-4', {
+            slidesToScroll: 4,
+            slidesToShow: 4,
             infinite: true,
             autoplay: false,
+            pagination: false,
         });

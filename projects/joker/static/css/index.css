@@ -12,6 +12,13 @@ body {
   margin-bottom: 10px;
 }
 
+.image-right {
+    float: right;
+    width: 50%; /* Set the image width to 50% */
+    margin-left: 20px; /* Optional: add some space between the image and the text */
+    margin-bottom: 20px;
+}
+
 .footer .icon-link {
     font-size: 25px;
     color: #000;
