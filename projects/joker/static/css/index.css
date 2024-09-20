@@ -1,22 +1,49 @@
 body {
-  font-family: 'Noto Sans', sans-serif;
-  overflow-x: auto
+    font-family: 'Noto Sans', sans-serif;
+    overflow-x: auto
 }
 
-.slider-text {
-    position: absolute;
-    right: 0;
-    bottom: 0
-  }
+#main_container {
+    width: 100%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px
+}
 
-.top-image{
-  margin-bottom: 10px;
+.footer {
+    min-width: 100%
+}
+
+#logo {
+    height: 120px;
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+    font-size: 2rem;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+    font-size: 16px;
+}
+
+.abstract {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.top-image {
+    margin-bottom: 10px;
 }
 
 .image-right {
-    float: right;
-    width: 50%; /* Set the image width to 50% */
-    margin-left: 20px; /* Optional: add some space between the image and the text */
+    width: 100%; /* Set the image width to 50% */
+    margin-left: 0px; /* Optional: add some space between the image and the text */
     margin-bottom: 20px;
 }
 
@@ -31,48 +58,37 @@ body {
 }
 
 .dnerf {
-  font-variant: small-caps;
+    font-variant: small-caps;
 }
 
 
 .teaser .hero-body {
-  padding-top: 0;
-  padding-bottom: 3rem;
+    padding-top: 0;
+    padding-bottom: 3rem;
 }
 
 .teaser {
-  font-family: 'Google Sans', sans-serif;
+    font-family: 'Google Sans', sans-serif;
 }
 
-
-.publication-title {
-}
 
 .publication-banner {
-  max-height: parent;
+    max-height: parent;
 
 }
-
 
 
 .publication-banner video {
-  position: relative;
-  left: auto;
-  top: auto;
-  transform: none;
-  object-fit: fit;
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    object-fit: fit;
 }
 
 .publication-header .hero-body {
 }
 
-.publication-title {
-    font-family: 'Google Sans', sans-serif;
-}
-
-.publication-authors {
-    font-family: 'Google Sans', sans-serif;
-}
 
 .publication-venue {
     color: #555;
@@ -86,11 +102,9 @@ body {
     font-weight: bolder;
 }
 
-.publication-authors {
-}
 
 .publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
+    color: hsl(204, 86%, 53%) !important;
 }
 
 .publication-authors a:hover {
@@ -98,14 +112,14 @@ body {
 }
 
 .author-block {
-  display: inline-block;
+    display: inline-block;
 }
 
 .publication-banner img {
 }
 
 .publication-authors {
-  /*color: #4286f4;*/
+    /*color: #4286f4;*/
 }
 
 .publication-video {
@@ -130,227 +144,271 @@ body {
 }
 
 .results-carousel {
-  overflow: hidden;
+    overflow: hidden;
 
 }
 
 .results-carousel .item {
-  margin: 5px;
-  overflow: hidden;
-  /*border: 1px solid #bbb;*/
-  border-radius: 10px;
-  padding: 0;
-  font-size: 0;
+    margin: 5px;
+    overflow: hidden;
+    /*border: 1px solid #bbb;*/
+    border-radius: 10px;
+    padding: 0;
+    font-size: 0;
 }
 
 .results-carousel video {
-  margin: 0;
+    margin: 0;
 }
 
 
 .interpolation-panel {
-  background: #f5f5f5;
-  border-radius: 10px;
+    background: #f5f5f5;
+    border-radius: 10px;
 }
 
 .interpolation-panel .interpolation-image {
-  width: 100%;
-  border-radius: 5px;
+    width: 100%;
+    border-radius: 5px;
 }
 
 .interpolation-video-column {
 }
 
 .interpolation-panel .slider {
-  margin: 0 !important;
+    margin: 0 !important;
 }
 
 .interpolation-panel .slider {
-  margin: 0 !important;
+    margin: 0 !important;
 }
 
 #interpolation-image-wrapper {
-  width: 100%;
+    width: 100%;
 }
+
 #interpolation-image-wrapper img {
-  border-radius: 5px;
+    border-radius: 5px;
 }
 
 .bal-container-small {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  cursor: grab;
-  overflow: hidden;
-  border-radius: 10px;
-  margin: 5px;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    cursor: grab;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 5px;
 }
 
 .bal-container-big {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  cursor: grab;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    cursor: grab;
+    overflow: hidden;
 }
 
 .bal-after {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .bal-before {
-  display: block;
-  position: absolute;
-  top: 0;
-  /* right: 0; */
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 15;
-  overflow: hidden;
+    display: block;
+    position: absolute;
+    top: 0;
+    /* right: 0; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    overflow: hidden;
 }
 
 .bal-before-inset {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .bal-after img,
 .bal-before img {
-  object-fit: cover;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-position: 50% 50%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-position: 50% 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 .bal-beforePosition {
-  background: #121212;
-  color: #fff;
-  left: 0;
-  pointer-events: none;
-  border-radius: 0.2rem;
-  padding: 2px 10px;
+    background: #121212;
+    color: #fff;
+    left: 0;
+    pointer-events: none;
+    border-radius: 0.2rem;
+    padding: 2px 10px;
 }
 
 .bal-afterPosition {
-  background: #121212;
-  color: #fff;
-  right: 0;
-  pointer-events: none;
-  border-radius: 0.2rem;
-  padding: 2px 10px;
+    background: #121212;
+    color: #fff;
+    right: 0;
+    pointer-events: none;
+    border-radius: 0.2rem;
+    padding: 2px 10px;
 }
 
 .beforeLabel {
-  position: absolute;
-  bottom: 0;
-  margin: 1rem;
-  font-size: 1em;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
+    position: absolute;
+    bottom: 0;
+    margin: 1rem;
+    font-size: 1em;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 .afterLabel {
-  position: absolute;
-  bottom: 0;
-  margin: 1rem;
-  font-size: 1em;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
+    position: absolute;
+    bottom: 0;
+    margin: 1rem;
+    font-size: 1em;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 .bal-handle {
-  height: 41px;
-  width: 41px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -20px;
-  margin-top: -21px;
-  border: 2px solid #fff;
-  border-radius: 1000px;
-  z-index: 20;
-  pointer-events: none;
-  box-shadow: 0 0 10px rgb(12, 12, 12);
+    height: 41px;
+    width: 41px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -20px;
+    margin-top: -21px;
+    border: 2px solid #fff;
+    border-radius: 1000px;
+    z-index: 20;
+    pointer-events: none;
+    box-shadow: 0 0 10px rgb(12, 12, 12);
 }
 
 .handle-left-arrow,
 .handle-right-arrow {
-  width: 0;
-  height: 0;
-  border: 6px inset transparent;
-  position: absolute;
-  top: 50%;
-  margin-top: -6px;
+    width: 0;
+    height: 0;
+    border: 6px inset transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
 }
 
 .handle-left-arrow {
-  border-right: 6px solid #fff;
-  left: 50%;
-  margin-left: -17px;
+    border-right: 6px solid #fff;
+    left: 50%;
+    margin-left: -17px;
 }
 
 .handle-right-arrow {
-  border-left: 6px solid #fff;
-  right: 50%;
-  margin-right: -17px;
+    border-left: 6px solid #fff;
+    right: 50%;
+    margin-right: -17px;
 }
 
 .bal-handle::before {
-  bottom: 50%;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgb(12, 12, 12);
+    bottom: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgb(12, 12, 12);
 }
 
 .bal-handle::after {
-  top: 50%;
-  margin-top: 20.5px;
-  box-shadow: 0 0 5px rgb(12, 12, 12);
+    top: 50%;
+    margin-top: 20.5px;
+    box-shadow: 0 0 5px rgb(12, 12, 12);
 }
 
 .bal-handle::before,
 .bal-handle::after {
-  content: " ";
-  display: block;
-  width: 2px;
-  background: #fff;
-  height: 9999px;
-  position: absolute;
-  left: 50%;
-  margin-left: -1.5px;
+    content: " ";
+    display: block;
+    width: 2px;
+    background: #fff;
+    height: 9999px;
+    position: absolute;
+    left: 50%;
+    margin-left: -1.5px;
 }
 
 .section {
-  width: 100%;
+    width: 100%;
 }
 
 
-.title.is-3{
-  color: #4CAF50;
+@media screen and (min-width: 650px) {
+    #main_container {
+        width: 650px;
+    }
+
+    .footer {
+        min-width: 650px
+    }
+
+    #logo {
+        height: 180px
+    }
+
+    .publication-title {
+        font-size: 3rem;
+    }
+
+    .publication-authors {
+        font-size: 20px;
+    }
+
+
+    .image-right {
+        float: right;
+        width: 50%; /* Set the image width to 50% */
+        margin-left: 20px; /* Optional: add some space between the image and the text */
+        padding-bottom: 20px;
+    }
+
+}
+
+@media screen and (min-width: 960px) {
+    #main_container {
+        width: 960px;
+    }
+
+    .footer {
+        min-width: 960px
+    }
+
+    .abstract {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto
+    }
 }

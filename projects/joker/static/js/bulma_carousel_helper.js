@@ -26,7 +26,9 @@ bulmaCarousel.attach('#results-carousel', {
             infinite: true,
             autoplay: false,
             pagination: false,
-            breakpoints: [],
+            breakpoints:
+                [
+                ],
         });
 bulmaCarousel.attach('#results-carousel-4', {
             slidesToScroll: 4,
@@ -34,5 +36,7 @@ bulmaCarousel.attach('#results-carousel-4', {
             infinite: true,
             autoplay: false,
             pagination: false,
-            breakpoints: [],
+            breakpoints:
+                [
+                ],
         });

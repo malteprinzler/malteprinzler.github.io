@@ -40,26 +40,27 @@
 
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css"/>
+    <link rel="stylesheet" href="./static/css/bulma-carousel.css"/>
 
     <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="https://kit.fontawesome.com/8c9171bec9.js" crossorigin="anonymous"></script>
+
 
 </head>
 
 <body>
-<div style="width: 960px; margin-left: auto; margin-right: auto; padding-top: 20px">
+<div id="main_container">
     <section>
-        <div class="columns is-centered">
-            <div class="column has-text-centered">
-                <img src="static/images/joker_logo.jpg" style="height:180px"></img>
-                <h1 class="title is-1 publication-title">
+        <div class="is-centered">
+            <div class="has-text-centered">
+                <img src="static/images/joker_logo.jpg" id="logo"></img>
+                <h1 class="title publication-title">
                     <span style="font-weight: bolder;background: linear-gradient(to right, #ff0000, #131f67); -webkit-text-fill-color: transparent; -webkit-background-clip: text;">Joker</span>:
                     Conditional 3D Head Synthesis with Extreme Facial Expressions</h1>
-                <div class="is-size-5 publication-authors">
+                <div class="publication-authors">
               <span class="author-block">  
                 <a target="_blank" href="https://malteprinzler.github.io/">Malte Prinzler</a><sup>1,2</sup>,</span>
                     <span class="author-block">
@@ -70,37 +71,64 @@
                 <a target="_blank" href="https://bernakabadayi.github.io/">Berna Kabadayi</a><sup>1</sup>,</span>
                     <span class="author-block">
                 <a target="_blank" href="https://justusthies.github.io/">Justus Thies</a><sup>1,4</sup>,</span>
-                </div>
+                    <br>
 
-                <div class="subtitle is-size-5" style="margin: 0px">
                     <sup>1</sup> Max Planck Institute for Intelligent Systems, Tübingen, Germany <br>
                     <sup>2</sup> Max Planck ETH Center for Learning Systems <br>
                     <sup>3</sup> ETH Zürich &nbsp;
-                    <sup>4</sup> Technical University of Darmstadt<br>
+                    <sup>4</sup> Technical University of Darmstadt<br><br>
                 </div>
 
-                <!-- TODO: update paper link -->
-                <div class="column has-text-centered">
-                    <!-- <div class="publication-links"> -->
-                    <!-- PDF Link. -->
-                    <span class="link-block">
-              <a href="./static/pdf/Joker_ArXiv.pdf" target="_blank"
-                 class="external-link button is-normal is-rounded is-dark">
-<!--                <i class="fa-solid fa-file-pdf"></i>-->
-                <span>Paper</span>
-              </a>
-            </span>
-                    <!-- Code Link. -->
-                    <span class="link-block">
+                <!-- Paper Link. -->
+                <span class="link-block">
                 <a
-                        class="external-link button is-normal is-rounded is-dark">
+                        class="external-link button is-normal is-rounded is-dark"
+                        href="./static/pdf/Joker_ArXiv.pdf">
+                  <span class="icon">
+                    <i class="fa-solid fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+                <!-- Video Link. -->
+                <span class="link-block">
+                <a
+                        class="external-link button is-normal is-rounded is-dark"
+                        href="#video">
+                  <span class="icon">
+                    <i class="fa-solid fa-video"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+
+                <!-- Code Link. -->
+                <span class="link-block">
+                <a
+                        class="external-link button is-normal is-rounded is-dark"
+                        href="https://github.com/malteprinzler/joker/tree/main">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
                   <span>Code (coming soon)</span>
                 </a>
               </span>
-                    <span class="link-block">
+
+                <!-- Cite Link. -->
+                <span class="link-block">
+                <a
+                        class="external-link button is-normal is-rounded is-dark"
+                        href="#bibtex">
+                  <span class="icon">
+                    <i class="fa-solid fa-quote-left"></i>
+                  </span>
+                  <span>Cite</span>
+                </a>
+              </span>
+
+                <!--Mail-->
+                <span class="link-block">
                 <a href="mailto:malte.prinzler@tuebingen.mpg.de"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -110,10 +138,9 @@
                 </a>
               </span>
 
-                </div>
             </div>
-
         </div>
+
     </section>
     <br>
 
@@ -156,7 +183,7 @@
                         </center>
                     </div>
                 </div>
-                <div class="has-text-centered">
+                <div class="has-text-centered" style="padding: 10px">
                     <p><span
                             style="font-weight: bolder;background: linear-gradient(to right, #ff0000, #131f67); -webkit-text-fill-color: transparent; -webkit-background-clip: text;">Joker</span>
                         uses one reference image to generate a 3D reconstruction with a novel extreme expression.
@@ -167,16 +194,16 @@
             </div>
         </div>
     </section>
+    <br
 
     <!--Abstract-->
-    <section class="section">
-        <div class="container is-max-desktop">
-            <!--/ Abstract. -->
-            <div class="columns is-centered ">
-                <div class="column">
+    <section>
+        <div>
+            <div class="is-centered ">
+                <div>
                     <h2 class="title is-3 has-text-centered"> <span
                             style="color: #000000 ;font-weight: bolder;">Abstract</span></h2>
-                    <div class="content has-text-justified" style="padding-left: 50px; padding-right: 50px">
+                    <div class="abstract has-text-justified">
                         <i>
                             We introduce Joker, a new method for the conditional synthesis of 3D human heads with
                             extreme
@@ -209,8 +236,8 @@
     <!--Video-->
     <section style="padding: 0" class="section hero">
         <div class="container is-max-desktop">
-            <h2 class="title is-3 has-text-centered" style="margin-bottom: 0"> <span
-                    style="color: #000000 ;font-weight: bolder;">Video</span></h2>
+            <a id="video"><h2 class="title is-3 has-text-centered" style="margin-bottom: 0"> <span
+                    style="color: #000000 ;font-weight: bolder;">Video</span></h2></a>
             <div class="item">
                 <div class="column-video"
                      style="border-radius:10px;justify-content: center;align-items: center; font-size: 100px;">
@@ -228,7 +255,6 @@
     <br>
     <section class="section" style="padding: 0">
         <div class="container is-max-desktop">
-            <!--/ Abstract. -->
             <div class="columns is-centered ">
                 <div class="column">
                     <h2 class="title is-3 has-text-centered"> <span
@@ -272,9 +298,8 @@
                         how the target images are generated and how frequently they are updated.
                         <br>
                         <br>
-                        <img src="./static/images/distillation_stage1.jpg" alt="Progressive 3D Distillation Stage 1"
-                             class="image-right">
-                        <u>Stage 1:</u> In Stage 1, the NeRF is rendered under several views. The renderings are noised
+                        <u>Stage1:</u><img src="./static/images/distillation_stage1.jpg" alt="Progressive 3D Distillation Stage 1"
+                             class="image-right"> In Stage 1, the NeRF is rendered under several views. The renderings are noised
                         according to discrete noise levels from a DDIM noise schedule and denoised in a single inference
                         step using the 2D prior. The resulting images are used as targets to optimize the NeRF for
                         several
@@ -283,9 +308,9 @@
                         Stage 1 is interrupted after ~60% of the noise levels and followed by Stage 2.
                         <br>
                         <br>
-                        <img src="./static/images/distillation_stage2.jpg" alt="Progressive 3D Distillation Stage 2"
-                             class="image-right">
-                        <u>Stage 2:</u> In Stage 2, we initalize the NeRF from the distillation result of Stage 1. Again
+
+                        <u>Stage2:</u><img src="./static/images/distillation_stage2.jpg" alt="Progressive 3D Distillation Stage 2"
+                             class="image-right"> In Stage 2, we initalize the NeRF from the distillation result of Stage 1. Again
                         the
                         NeRF is rendered under several views and the renderings are noised. This time, the target images
                         are
@@ -348,7 +373,7 @@
     <!--    </div>-->
     <!--</section>-->
     <br>
-
+    <br>
     <!--Baseline Comparisons-->
     <section class="hero is-small" style="padding: 0; margin-left: auto; margin-right: auto;">
         <div class="hero-body" style="padding: 0">
@@ -656,7 +681,6 @@
     <!--Paper-->
     <section class="section">
         <div class="container is-max-desktop">
-            <!--/ Abstract. -->
             <div class="columns is-centered ">
                 <div class="column">
                     <h2 class="title is-3 has-text-centered" style="margin-bottom: 0"> <span
@@ -672,22 +696,22 @@
     <!--BibTex-->
     <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
-            <h2 class="title">BibTeX</h2>
+            <a id="bibtex"><h2 class="title">BibTeX</h2></a>
 
             <pre><code>
-          @article{prinzler2024joker,
-            title={Joker: Conditional 3D Head Synthesis with Extreme Facial Expressions,
-            author={Prinzler, Malte and Zakharov, Egor and Sklyarova, Vanessa and Kabadayi, Berna and Thies, Justus},
-            journal={arXiv preprint},
-            year={2024}
-          }
+@article{prinzler2024joker,
+  title={Joker: Conditional 3D Head Synthesis with Extreme Facial Expressions,
+  author={Prinzler, Malte and Zakharov, Egor and Sklyarova, Vanessa and Kabadayi, Berna and Thies, Justus},
+  journal={arXiv preprint},
+  year={2024}
+}
         </code></pre>
         </div>
     </section>
 </div>
 
 <!-- TODO: update the arxiv link and github -->
-<footer class="footer" style="min-width: 960px">
+<footer class="footer">
     <div class="container">
         <div class="content has-text-centered">
             <!-- <a class="icon-link" href="">
@@ -709,7 +733,7 @@
         </div>
     </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
-<script src="./static/js/bulma_carousel.js"></script>
+<script src="./static/js/bulma-carousel.js"></script>
+<script src="./static/js/bulma_carousel_helper.js"></script>
 </body>
 </html>
