@@ -19,6 +19,7 @@ body {
 
 #logo {
     height: 120px;
+    margin-bottom: 10px;
 }
 
 .publication-title {
@@ -38,7 +39,12 @@ body {
 }
 
 .top-image {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.carousel-item.col {
+    border-radius: 10px !important;
 }
 
 .image-right {
@@ -161,6 +167,13 @@ body {
     margin: 0;
 }
 
+.item-rounder {
+    overflow: hidden;
+    border-radius: 10px;
+}
+.item-rounder video{
+    display: block;
+}
 
 .interpolation-panel {
     background: #f5f5f5;
