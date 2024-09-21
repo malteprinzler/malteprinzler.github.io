@@ -77,6 +77,17 @@ body {
     font-family: 'Google Sans', sans-serif;
 }
 
+.slider-navigation-next {
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+}
+
+.slider-navigation-previous {
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+}
 
 .publication-banner {
     max-height: parent;
@@ -171,7 +182,8 @@ body {
     overflow: hidden;
     border-radius: 10px;
 }
-.item-rounder video{
+
+.item-rounder video {
     display: block;
 }
 
@@ -400,6 +412,17 @@ body {
         font-size: 20px;
     }
 
+    .slider-navigation-next {
+        width: 42px;
+        height: 42px;
+        margin-top: -20px;
+    }
+
+    .slider-navigation-previous {
+        width: 42px;
+        height: 42px;
+        margin-top: -20px;
+    }
 
     .image-right {
         float: right;
