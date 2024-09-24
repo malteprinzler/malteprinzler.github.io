@@ -37,7 +37,7 @@
                         Hi there,
                         <br>
                         <br>
-                        I am a Ph.D. student with the <a href="https://learning-systems.org/">Max Planck ETH Center for Learning Systems (CLS)</a>, supervised by <a href="https://justusthies.github.io/">Justus Thies</a> (MPI) and <a href="https://ait.ethz.ch/people/hilliges/">Otmar Hilliges</a> (ETH).
+                        I am a Ph.D. student with the <a href="https://learning-systems.org/">Max Planck ETH Center for Learning Systems (CLS)</a>, supervised by <a href="https://justusthies.github.io/">Justus Thies</a> (TU Darmstadt), <a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a> (ETH), and <a href="https://ait.ethz.ch/people/hilliges/">Otmar Hilliges</a> (ETH).
                         My research focuses on reconstructing photo-realistic 3D avatars of the human head with affordable capturing hardware.
                         Such technology will be a crucial step towards next-gen telecommunication and entertainment, e.g.,  in immersive 3D video-conferencing and VR gaming.
                         <br>
@@ -67,6 +67,46 @@
         <!-- PROJECT THAT HE OWNS -->
         <div class="container-xxl" style="width: 1034px;" id="projects">
             <div class="row row-cols-1 g-4">
+                <div class="col">
+                    <div class="card project-card mb-1"  onmouseover="playVideo()" onmouseleave="pauseVideo()">
+                      <div class="row g-0">
+                        <div class="col-5">
+<!--                            <img src="projects/joker/static/images/teaser_poster.png" class="img-fluid project-img project-img-static">-->
+<!--                            <img src="projects/joker/static/videos/teaser.gif" class="img-fluid project-img">-->
+                            <video muted loop playsinline style="height: 210px; margin-right: auto; margin-left: auto; margin-top: 10px; display: block" id="hover-video">
+                                <source src="projects/joker/static/videos/teaser.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="col-7">
+                          <div class="card-body">
+                            <h5 class="card-title">Joker: Conditional 3D Head Synthesis with Extreme Facial Expressions</h5>
+                              <p class="project-card-text"><small class="text-muted"><b><a href="./index.html">Malte Prinzler</a></b>, Egor Zakharov, Vanessa Slyarova, Berna Kabadayi, Justus Thies <br>(under submission)</small></p>
+                              <a href="projects/joker/index.html" class="stretched-link hidden"></a>
+                            <p class="project-card-text">We introduce Joker, a new method for the conditional synthesis of 3D human heads with
+                            extreme
+                            expressions. Given a single reference image of a person, we synthesize a volumetric human
+                            head
+                            with the reference’s identity and a new expression. We offer control over the expression via
+                            a
+                            3D morphable model (3DMM) and textual inputs. This multi-modal conditioning signal is
+                            essential
+                            since 3DMMs alone fail to define subtle emotional changes and extreme expressions, including
+                            those involving the mouth cavity and tongue articulation. Our method is built upon a 2D
+                            diffusion-based prior that generalizes well to out-of-domain samples, such as sculptures,
+                            heavy
+                            makeup, and paintings while achieving high levels of expressiveness. To improve view
+                            consistency, we propose a new 3D distillation technique that converts predictions of our 2D
+                            prior into a neural radiance field (NeRF). Both the 2D prior and our distillation technique
+                            produce state-of-the-art results, which are confirmed by our extensive evaluations. Also, to
+                            the
+                            best of our knowledge, our method is the first to achieve view-consistent extreme tongue
+                            articulation.</p>
+                            <br>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
 
                 <div class="col">
                     <div class="card project-card mb-1">
@@ -77,6 +117,7 @@
                         <div class="col-7">
                           <div class="card-body">
                             <h5 class="card-title">DINER: Depth-aware Image-based NEural Radiance fields</h5>
+                              <p class="project-card-text"><small class="text-muted"><b>Malte Prinzler</b>, Otmar Hilliges, Justus Thies<br>CVPR 2023</small></p>
                               <a href="projects/diner/diner.html" class="stretched-link hidden"></a>
                             <p class="project-card-text">We present Depth-aware Image-based NEural Radiance fields (DINER). Given a sparse set of RGB input views, we predict depth and feature maps to guide the reconstruction of a volumetric scene representation that allows us to render 3D objects under novel views. Specifically, we propose novel techniques to incorporate depth information into feature fusion and efficient scene sampling. In comparison to the previous state of the art, DINER achieves higher synthesis quality and can process input views with greater disparity. This allows us to capture scenes more completely without changing capturing hardware requirements and ultimately enables larger viewpoint changes during novel view synthesis. We evaluate our method by synthesizing novel views, both for human heads and for general objects, and observe significantly improved qualitative results and increased perceptual metrics compared to the previous state of the art. The code will be made publicly available for research purposes.</p>
                             <br>
@@ -94,7 +135,7 @@
                         <div class="col-7">
                           <div class="card-body">
                             <h5 class="card-title">Neural Head Avatars from Monocular RGB Videos</h5>
-                            <p class="project-card-text"><small class="text-muted">CVPR 2022</small></p>
+                            <p class="project-card-text"><small class="text-muted">Philip-William Grassal<sup>*</sup>, <b>Malte Prinzler</b><sup>*</sup>, Titus Leistner, Carsten Rother, Matthias Nießner, Justus Thies (<sup>*</sup>equal contribution)<br>CVPR 2022</small></p>
                             <a href="projects/neural_head_avatars/neural_head_avatars.html" class="stretched-link hidden"></a>
                             <p class="project-card-text">We present Neural Head Avatars, a novel neural representation that explicitly models the surface geometry and appearance of an animatable human avatar that can be used for teleconferencing in AR/VR or other applications in the movie or games industry that rely on a digital human. Our representation can be learned from a monocular RGB portrait video that features a range of different expressions and views. Specifically, we propose a hybrid representation consisting of a morphable model for the coarse shape and expressions of the face, and two feed-forward networks, predicting vertex offsets of the underlying mesh as well as a view- and expression-dependent texture. We demonstrate that this representation is able to accurately extrapolate to unseen poses and view points, and generates natural expressions while providing sharp texture details. Compared to previous works on head avatars, our method provides a disentangled shape and appearance model of the complete human head (including hair) that is compatible with the standard graphics pipeline. Moreover, it quantitatively and qualitatively outperforms current state of the art in terms of reconstruction quality and novel-view synthesis.</p>
                             <br>
@@ -132,6 +173,24 @@
         <br>
         <div class="container-xxl" style="width: 1034px;">
             <div class="row row-cols-1 g-4">
+                 <div class="col">
+                    <div class="card experience-card mb-1">
+                      <div class="row g-0">
+                        <div class="col-5">
+                            <div class="col d-flex align-items-center justify-content-center text-center" style="align-items: center; height: 160px">
+                                <a href="https://cvpr.thecvf.com/Conferences/2023"><img src="assets/cvpr2023_logo.png" class="img-fluid" style="width: 80%"></a>
+                            </div>
+                        </div>
+                        <div class="col-7">
+                          <div class="card-body">
+                            <h5 class="card-title">Presenter</h5>
+                              <p class="card-text"><small class="text-muted">Computer Vision and Pattern Recognition Conference (CVPR)<br>Jun 2023</small></p>
+                              <p class="card-text">Presented our paper <a href="projects/diner/diner.html">DINER: Depth-aware Neural Radiance Fields</a>.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
                 <div class="col">
                     <div class="card experience-card mb-1">
                       <div class="row g-0">
@@ -144,7 +203,7 @@
                           <div class="card-body">
                             <h5 class="card-title">Ph.D. Student</h5>
                               <p class="card-text"><small class="text-muted">Max Planck ETH Center for Learning Systems (CLS)<br>Since Mar 2022</small></p>
-                            <p class="card-text">Co-supervised by <a href="https://justusthies.github.io/">Justus Thies</a> and <a href="https://ait.ethz.ch/people/hilliges/">Otmar Hilliges</a>, my research focuses on reconstructing photo-realistic 3D avatars of the human head based on affordable capturing hardware.</p>
+                            <p class="card-text">Co-supervised by <a href="https://justusthies.github.io/">Justus Thies</a> (TU Darmstadt), <a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a> (ETH), and <a href="https://ait.ethz.ch/people/hilliges/">Otmar Hilliges</a> (ETH), my research focuses on reconstructing photo-realistic 3D avatars of the human head based on affordable capturing hardware.</p>
                           </div>
                         </div>
                       </div>
@@ -181,7 +240,7 @@
                       <div class="row g-0">
                         <div class="col-5">
                             <div class="col d-flex align-items-center justify-content-center text-center" style="align-items: center; height: 160px">
-                                <a href="https://cvpr2022.thecvf.com"><img src="assets/cvpr_logo.png" class="img-fluid" style="width: 60%"></a>
+                                <a href="https://cvpr2022.thecvf.com/"><img src="assets/cvpr_logo.png" class="img-fluid" style="width: 60%"></a>
                             </div>
                         </div>
                         <div class="col-7">
@@ -300,6 +359,21 @@
                 placement: 'bottom',
             });
         </script>
+
+<!--        autoplaying videos on hover-->
+        <script>
+    var video = document.getElementById('hover-video');
+
+    function playVideo() {
+        video.play();
+    }
+
+    function pauseVideo() {
+        video.pause();
+        video.currentTime = 0;  // Reset video to the start if you want
+    }
+</script>
+
 
     </div>
 </body>
