@@ -43,12 +43,13 @@ text_1 = "Prompt:\n\"A man with his tongue sticking out\""
 text_2 = "Prompt:\n\"A man with an angry expression\""
 out_path = "./teaser.mp4"
 
-stride = 2
+stride = 3
 tmp_out_path = "/tmp/text_control_videos"
 fnt = ImageFont.truetype("/home/mprinzler/Downloads/noto-sans/NotoSans-Bold.ttf", size=30)
 prompt_fnt = ImageFont.truetype("/home/mprinzler/Downloads/noto-sans/NotoSans-Italic.ttf", size=30)
 text_bbx_pad = 4
 video_pad = 8
+fps = 30
 
 ref_img = ref_img.resize((int((512 - video_pad) / 2), int((512 - video_pad) / 2))).convert("RGBA")
 control_img = control_img.resize((int((512 - video_pad) / 2), int((512 - video_pad) / 2))).convert("RGBA")
@@ -130,4 +131,4 @@ for i in tqdm.tqdm(range(nframes)):
     Image.fromarray(out_canvas).save(os.path.join(tmp_out_path, f"{i:03d}.png"))
 Path(out_path).parent.mkdir(parents=True, exist_ok=True)
 os.system(
-    f"/usr/bin/ffmpeg -pattern_type glob -framerate 40 -i '{tmp_out_path}/*.png' -c:v libx264 -crf 23 -profile:v baseline -level 3.0 -pix_fmt yuv420p -c:a aac -ac 2 -b:a 128k -movflags faststart {out_path} -y")
+    f"/usr/bin/ffmpeg -pattern_type glob -framerate {fps} -i '{tmp_out_path}/*.png' -c:v libx264 -crf 23 -profile:v baseline -level 3.0 -pix_fmt yuv420p -c:a aac -ac 2 -b:a 128k -movflags faststart {out_path} -y")
