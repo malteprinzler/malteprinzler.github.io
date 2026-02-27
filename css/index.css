@@ -5,6 +5,7 @@ html {
     background-color: #FFFFFF;
     color: black;
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 /* HEADINGS */
@@ -61,6 +62,49 @@ html {
 }
 
 /* ---------------------------------- */
+
+.section-nav-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding-top: 0.5rem;
+}
+
+.section-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 8px;
+    backdrop-filter: blur(2px);
+}
+
+.section-nav a {
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: #4b4b4b;
+    font-weight: 600;
+}
+
+.section-nav a:hover {
+    color: #111111;
+}
+
+.section-nav a.is-active {
+    color: #111111;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    padding: 0.2rem 0.45rem;
+}
+
+#projects,
+#experience,
+#education {
+    scroll-margin-top: 4.5rem;
+}
 
 /* EFFECTS */
 
