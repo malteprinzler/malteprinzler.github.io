@@ -67,6 +67,36 @@
     <!-- PROJECT THAT HE OWNS -->
     <div class="container-xxl" style="width: 1034px;" id="projects">
         <div class="row row-cols-1 g-4">
+
+            <!-- MATCH PROJECT -->
+            <div class="col">
+                <div class="card project-card mb-1" onmouseover="playMATCHVideo()" onmouseleave="pauseMATCHVideo()">
+                    <div class="row g-0">
+                        <div class="col-5">
+                            <video muted loop playsinline style="height: 210px; margin-right: auto; margin-left: auto; margin-top: 10px; display: block" id="hover-video-match">
+                                <source src="projects/match/static/videos/teaser_hq_fixed_sat1.3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body">
+                                <h5 class="card-title">MATCH: Feed-forward Gaussian Registration for Head Avatar Creation and Editing</h5>
+                                <p class="project-card-text"><small class="text-muted"><b><a href="./index.html">Malte Prinzler</a></b>, Paulo Gotardo, Siyu Tang, Timo Bolkart <br>CVPR 2026</small></p>
+                                <a href="projects/match/index.html" class="stretched-link hidden"></a>
+                                <p class="project-card-text">
+                                    We present <strong>MATCH</strong> (Multi-view Avatars from Topologically Corresponding Heads), a multi-view Gaussian registration method for high-quality head avatar creation and editing.
+                                    State-of-the-art multi-view head avatar methods require time-consuming head tracking followed by expensive avatar optimization, often resulting in a total creation time of more than one day. MATCH, in contrast, directly predicts Gaussian splat textures in correspondence from calibrated multi-view images in just 0.5 seconds per frame, without requiring data preprocessing.                        
+                                    The learned intra-subject correspondence across frames enables fast creation of personalized head avatars, while correspondence across subjects supports applications such as expression transfer, optimization-free tracking, semantic editing, and identity interpolation.
+                                    We establish these correspondences end-to-end using a transformer-based model that predicts Gaussian splat textures in the fixed UV layout of a template mesh.
+                                    To achieve this, we introduce a novel registration-guided attention block, where each UV-map token attends exclusively to image tokens depicting its corresponding mesh region. This design improves efficiency and performance compared to dense cross-view attention.
+                                    MATCH outperforms existing methods in novel-view synthesis, geometry registration, and head avatar generation, while making avatar creation 10 times faster than the closest competing baseline.
+                                    </p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+            <!-- JOKER PROJECT -->
             <div class="col">
                 <div class="card project-card mb-1" onmouseover="playJokerVideo()" onmouseleave="pauseJokerVideo()">
                     <div class="row g-0">
@@ -106,6 +136,7 @@
                 </div>
             </div>
 
+            <!-- DINER PROJECT -->
             <div class="col">
                 <div class="card project-card mb-1" onmouseover="playDinerVideo()" onmouseleave="pauseDinerVideo()">
                     <div class="row g-0">
@@ -364,8 +395,18 @@
 
     <!--        autoplaying videos on hover-->
     <script>
+        var video_match = document.getElementById('hover-video-match');
         var video_joker = document.getElementById('hover-video-joker');
         var video_diner = document.getElementById('hover-video-diner');
+
+        function playMATCHVideo() {
+            video_match.play();
+        }
+
+        function pauseMATCHVideo() {
+            video_match.pause();
+            video_match.currentTime = 0;  // Reset video to the start if you want
+        }
 
         function playJokerVideo() {
             video_joker.play();
