@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="MATCH: Feed-forward Gaussian Registration for Head Avatar Creation and Editing">
+    <meta name="keywords"
+          content="MATCH, 3D head avatar, Gaussian registration">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MATCH: Feed-forward Gaussian Registration for Head Avatar Creation and Editing</title>
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.178.0/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.178.0/examples/jsm/",
+        "@sparkjsdev/spark": "https://sparkjs.dev/releases/spark/0.1.10/spark.module.js"
+      }
+    }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+            src="https://code.jquery.com/color/jquery.color-2.2.0.min.js"
+            integrity="sha256-aSe2ZC5QeunlL/w/7PsVKmV+fa0eDbmybn/ptsKHR6I="
+            crossorigin="anonymous"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <!--    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>-->
+    <script src="./static/js/interact.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+<!-- Title, Authors & Link Capsules -->
+<section class="hero section-title">
+    <!--    <div class="hero-body">-->
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column has-text-centered">
+                <h1 class="title is-3 publication-title" style="text-shadow: none">
+                    <img src="./static/images/match_icon.png" alt="MATCH icon"
+                         style="display:block; width:100px; max-width:100%; margin:0 auto 0.5rem; border:none;">
+                    <span class="title is-2"
+                          style="margin-bottom: 0rem; display:inline-block; letter-spacing:0.01em; background:linear-gradient(to right, #ff00ff, #03c8ff); color:transparent; background-clip:text; -webkit-text-fill-color:transparent; -webkit-background-clip:text;">MATCH
+                    </span>
+
+                    <br/>
+                    Feed-forward Gaussian Registration for Head Avatar Creation and Editing
+                    <br/>
+                    <small style="font-weight: 400;">(CVPR 2026)</small>
+                    
+                </h1>
+                
+
+                <div class="is-size-5 publication-authors">
+                        <span class="author-block">
+                          <a href="https://malteprinzler.github.io/"
+                             target="_blank">Malte Prinzler</a><sup>1,2*</sup>,</span>
+                    <span class="author-block">
+                          <a href="https://www.paulogotardo.com/" target="_blank">Paulo Gotardo</a><sup>2</sup>,
+                        </span>
+                    <span class="author-block">
+                          <a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html" target="_blank">Siyu Tang</a><sup>1</sup>
+                        </span>
+                    <span class="author-block">
+                            <a href="https://sites.google.com/site/bolkartt/" target="_blank">Timo Bolkart</a><sup>2</sup>
+                          </span>
+                </div>
+
+                <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>ETH Zürich</span>
+                    <span class="author-block"><sup>2</sup>Google</span> <br/>
+                    <span class="author-block" style="font-style: italic; font-size: 0.8em;"><sup>*</sup>Work done while Malte Prinzler interned at Google.</span>
+                </div>
+
+                <!--                <div class="is-size-5 m-3"><strong>SIGGRAPH Asia 2024</strong></div>-->
+
+                <div class="column has-text-centered">
+                    <div class="publication-links">
+                        <!-- PDF Link. -->
+                        <span class="link-block">
+                                <a href="./paper/MATCH_Paper_HQ.pdf"
+                                   target="_blank"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                  <span class="icon">
+                                      <i class="fas fa-file-pdf"></i>
+                                  </span>
+                                  <span>Paper (HQ)</span>
+                                </a>
+                            </span>
+                        <span class="link-block">
+                                <a href="./paper/MATCH_Paper_LQ.pdf"
+                                   target="_blank"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                  <span class="icon">
+                                      <i class="fas fa-file-pdf"></i>
+                                  </span>
+                                  <span>Paper (LQ)</span>
+                                </a>
+                            </span>
+
+                        <span class="link-block">
+                                <a href="#"
+                                   target="_blank"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                  <span class="icon">
+                                      <i class="ai ai-arxiv"></i>
+                                  </span>
+                                  <span>arXiv (coming soon)</span>
+                                </a>
+                            </span>
+
+                        <!-- Video Link. -->
+                        <span class="link-block">
+                                <a href="https://youtu.be/Z3xoXQ648sE" target="_blank"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                  <span class="icon">
+                                      <!-- "fas" means fa-brand -->
+                                      <i class="fab fa-youtube"></i>
+                                  </span>
+                                  <span>Video</span>
+                                </a>
+                            </span>
+
+                        <!-- Code Link. -->
+                        <span class="link-block">
+                                <a href="#" target="_blank"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                  <span class="icon">
+                                      <i class="fab fa-github"></i>
+                                  </span>
+                                  <span>Code (coming soon)</span>
+                                  </a>
+                            </span>
+                        <span class="link-block">
+                                <a href="#BibTeX"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                   
+                                   <span class="icon">
+                                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                                  </span>
+                                  <span>Cite</span>
+                                  </a>
+                            </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--        </div>-->
+    </div>
+</section>
+
+<section class="teaser is-centered has-text-centered">
+    <video id="teaser" autoplay muted playsinline controls style="width:34%; max-width:900px; height:auto;">
+        <source src="./static/videos/teaser_hq_fixed_sat1.3.mp4" type="video/mp4">
+    </video>
+</section>
+
+<section id="avatar-viewer" class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered" style="margin-bottom:0; margin-top: 1px">
+            <div class="column is-four-fifths has-text-justified">
+                TL;DR: Given calibrated multi-view images, MATCH infers static Gaussian splat textures in 0.5 seconds. The resulting Gaussians
+                are in dense semantic correspondence across subjects and expressions. This allows for various applications such as editing, expression transfer, and fast avatar optimization.
+            </div>
+        </div>
+        <br/>
+    </div>
+</section>
+
+<section class="section">
+    <!-- Abstract -->
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        We present <strong>MATCH</strong> (Multi-view Avatars from Topologically Corresponding Heads), a multi-view Gaussian registration method for high-quality head avatar creation and editing.
+                        State-of-the-art multi-view head avatar methods require time-consuming head tracking followed by expensive avatar optimization, often resulting in a total creation time of more than one day. MATCH, in contrast, directly predicts Gaussian splat textures in correspondence from calibrated multi-view images in just 0.5 seconds per frame, without requiring data preprocessing.                        
+                        The learned intra-subject correspondence across frames enables fast creation of personalized head avatars, while correspondence across subjects supports applications such as expression transfer, optimization-free tracking, semantic editing, and identity interpolation.
+                        We establish these correspondences end-to-end using a transformer-based model that predicts Gaussian splat textures in the fixed UV layout of a template mesh.
+                    </p>
+                    <p>
+                        To achieve this, we introduce a novel registration-guided attention block, where each UV-map token attends exclusively to image tokens depicting its corresponding mesh region. This design improves efficiency and performance compared to dense cross-view attention.
+                        MATCH outperforms existing methods in novel-view synthesis, geometry registration, and head avatar generation, while making avatar creation 10 times faster than the closest competing baseline.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--/ Abstract. -->
+
+    </div>
+</section>
+<!-- Results -->
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+                <h2 class="title is-3 has-text-centered">Reconstruction Examples</h2>
+                <div class="content has-text">
+                        <div class="container is-max-desktop">
+                            <div id="match-results-carousel" class="carousel match-results-carousel">
+                                <div class="item">
+                                    <video autoplay muted loop playsinline>
+                                        <source src="./static/videos/thanks_for_watching_triplets/triplet_01.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="item">
+                                    <video autoplay muted loop playsinline>
+                                        <source src="./static/videos/thanks_for_watching_triplets/triplet_02.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="item">
+                                    <video autoplay muted loop playsinline>
+                                        <source src="./static/videos/thanks_for_watching_triplets/triplet_03.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="item">
+                                    <video autoplay muted loop playsinline>
+                                        <source src="./static/videos/thanks_for_watching_triplets/triplet_04.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="item">
+                                    <video autoplay muted loop playsinline>
+                                        <source src="./static/videos/thanks_for_watching_triplets/triplet_05.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="item">
+                                    <video autoplay muted loop playsinline>
+                                        <source src="./static/videos/thanks_for_watching_triplets/triplet_06.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="item">
+                                    <video autoplay muted loop playsinline>
+                                        <source src="./static/videos/thanks_for_watching_triplets/triplet_07.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Paper video. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Video</h2>
+                <div class="publication-video" style="background-color: #fff;">
+                    <iframe src="https://www.youtube.com/embed/Z3xoXQ648sE" frameborder="0"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Method -->
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+                <h2 class="title is-3 has-text-centered">Method Overview</h2>
+                <img src="./static/images/method.jpg" width="100%"/>
+                <div class="content has-text">
+                        <strong>MATCH</strong> is a fast, feed-forward method designed to reconstruct photorealistic 3D human heads from calibrated multi-view images. In under a second, the network processes multi-view inputs and outputs a UV texture of 2D Gaussian splat parameters. These parameters are in dense semantic correspondence such that each Gaussian consistently represents the same semantic region (e.g., the nose tip), regardless of identity or expression.
+                        </p>
+                        <h3>MATCH Pipeline</h3>
+                        <p>
+                          The model leverages a transformer architecture that efficiently fuses 2D image data with 3D spatial awareness.
+                        </p>
+                        <ul>
+                          <li>
+                            <strong>Image Tokenization:</strong> High-resolution input images are divided into manageable patches. These are fused with semantic features (extracted via Sapiens) and spatial ray coordinates to create dense Image Tokens.
+                          </li>
+                          <li>
+                            <strong>Coarse Mesh Registration:</strong> The model uses a pretrained network (an adapted <a href='https://github.com/TimoBolkart/TEMPEH'>TEMPEH</a> model) to estimate an initial, coarse 3D mesh of the subject's head directly from the input images.
+                          </li>
+                          <li>
+                            <p><strong>UV Tokenization:</strong> Using the coarse mesh, the we calculate 3D location and color texture maps which are devided into non-overlapping patches and projectd to UV tokens.</p>
+                            <p>Image and UV tokens are processed by a sequence of two alternating attention blocks.</p>
+                          </li>
+                          <li>
+                            <strong>Registration-Guided Attention:</strong> To keep computation efficient&mdash;even as the number of input images increases&mdash;the transformer restricts attention based on physical visibility. Each UV token only attends to the specific image tokens that display its corresponding facial region, determined by a calculated correspondence score.
+                          </li>
+                        </ul>                  
+                      
+                        <ul>
+                          <li>
+                            <strong>Grouped Attention:</strong> This block processes UV tokens and individual camera views separately. This helps seamlessly propagate information to unobserved or occluded regions of the head and perform image-space feature processing.
+                          </li>
+                          <li>
+                            <strong>Gaussian Splat Decoding:</strong> The fully processed UV tokens are projected into a final output texture. Every texel in this map provides the precise parameters&mdash;color, opacity, location, scale, and rotation&mdash;needed to render the final 3D Gaussian splat representation.
+                          </li>
+                        </ul>
+                        <img src="./static/images/avatar_creation.jpg"
+                             style="float: right; width: 40%; max-width: 40%; margin: 0 0 1rem 1.5rem;"/>                      
+                        <h3>Animatable Avatar Creation</h3>
+                        
+                        <p>
+                            Beyond static 3D reconstruction, <strong>MATCH</strong> accelerates the creation of lightweight, animatable <a href='https://zielon.github.io/gem/'>GEM</a> avatars by a factor of 10.
+                        </p>
+                        <ul>
+                          <li>
+                            <strong>Bypassing Expensive Tracking:</strong> By inherently predicting Gaussians in dense semantic correspondence, the method skips the computationally heavy mesh-tracking and CNN-optimization steps typically required by frameworks like GEM.
+                          </li>
+                          <li>
+                            <strong>Rapid Distillation:</strong> The model rapidly infers sequences of Gaussian textures from multi-view video. These textures are unposed into a canonical space and compressed using Principal Component Analysis (PCA).
+                          </li>
+                          <li>
+                            <strong>Controllable Output:</strong> We optimize a regressor network that estimates the PCA coefficients from monocular videos, yielding high-quality, animatable avatars.
+                          </li>
+                        </ul>
+                        <div style="clear: both;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Baseline  -->
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+                <h2 class="title is-3 has-text-centered">Baseline Comparisons</h2>
+                <div class="content has-text">
+                    <h3>Static 3D Reconstruction</h3>
+                    <div class="container is-max-desktop">
+                        <div id="nvs-baseline-comparison-carousel" class="carousel match-results-carousel">
+                            <div class="item">
+                                <video autoplay muted loop playsinline>
+                                    <source src="./static/videos/baseline_comparisons/nvs_comparison_1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="item">
+                                <video autoplay muted loop playsinline>
+                                    <source src="./static/videos/baseline_comparisons/nvs_comparison_2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Animatable Head Avatars</h3>
+                    <div class="container is-max-desktop">
+                        <div id="avatar-baseline-comparison-carousel" class="carousel match-results-carousel">
+                            <div class="item">
+                                <video autoplay muted loop playsinline>
+                                    <source src="./static/videos/baseline_comparisons/avatar_comparison_1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="item">
+                                <video autoplay muted loop playsinline>
+                                    <source src="./static/videos/baseline_comparisons/avatar_comparison_2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title" style="text-align: center">BibTeX</h2>
+        <pre><code>@article{prinzler2026match,
+  title={Feed-forward Gaussian Registration for Head Avatar Creation and Editing},
+  author={Prinzler, Malte and Gotardo, Paulo and Tang, Siyu and Bolkart, Timo},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2026}
+}
+</code></pre>
+    </div>
+</section>
+
+
+</body>
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-full-width">
+                <div class="content has-text-centered">
+                    <p>
+                        Website inspired by <a href="https://tobias-kirschstein.github.io">Tobias Kirschstein</a>'s <a
+                            href="https://tobias-kirschstein.github.io/flexavatar/">FlexAvatar website</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+</html>
