@@ -42,7 +42,7 @@
                     Such technology will be a crucial step towards next-gen telecommunication and entertainment, e.g., in immersive 3D video-conferencing and VR gaming.
                     <br>
                     <br>
-                    From February 2025 until April 2026, I joined the Syntec team within Google Android XR lead by <a href="https://www.thabobeeler.com/" target="_blank">Thabo Beeler</a> as a student researcher to work on the reconstruction and registration of photo-realistic 3D human heads from studio captures.
+                    From February 2025 until April 2026, I joined the Syntec team within <a href='https://www.android.com/xr/' target="_blank">Google Android XR</a> lead by <a href="https://www.thabobeeler.com/" target="_blank">Thabo Beeler</a> as a student researcher to work on the reconstruction and registration of photo-realistic 3D human heads from studio captures.
                     <br>
                     <br>
                     Before my Ph.D., I obtained a Master's Degree in Physics from <a href="https://www.uni-heidelberg.de/en" target="_blank">Heidelberg University</a> and studied at the <a href="https://www.cics.umass.edu/" target="_blank">Manning College of Information and Computer Sciences</a> at the <a href="https://www.umass.edu/" target="_blank">University of Massachusetts, Amherst, USA</a> under the supervision of <a href="https://people.cs.umass.edu/~elm/" target="_blank">Prof. Erik G. Learned-Miller</a>.
@@ -66,7 +66,7 @@
         <div class="container-xxl" style="width: 1034px;">
             <div class="section-nav">
                 <a href="#projects">Projects</a>
-                <a href="#experience">Experiences</a>
+                <a href="#experience">Experience</a>
                 <a href="#education">Education</a>
             </div>
         </div>
@@ -76,7 +76,6 @@
         <h1>PROJECTS</h1>
     </div>
     <br>
-    <!-- PROJECT THAT HE OWNS -->
     <div class="container-xxl" style="width: 1034px;">
         <div class="row row-cols-1 g-4">
 
@@ -95,12 +94,7 @@
                                 <p class="project-card-text"><small class="text-muted"><b><a href="./index.html" target="_blank">Malte Prinzler</a></b>, Paulo Gotardo, Siyu Tang, Timo Bolkart <br>CVPR 2026</small></p>
                                 <a href="projects/match/index.html" class="stretched-link hidden" target="_blank"></a>
                                 <p class="project-card-text">
-                                    We present MATCH (Multi-view Avatars from Topologically Corresponding Heads), a multi-view Gaussian registration method for high-quality head avatar creation and editing.
-                                    State-of-the-art multi-view head avatar methods require time-consuming head tracking followed by expensive avatar optimization, often resulting in a total creation time of more than one day. MATCH, in contrast, directly predicts Gaussian splat textures in correspondence from calibrated multi-view images in just 0.5 seconds per frame, without requiring data preprocessing.                        
-                                    The learned intra-subject correspondence across frames enables fast creation of personalized head avatars, while correspondence across subjects supports applications such as expression transfer, optimization-free tracking, semantic editing, and identity interpolation.
-                                    We establish these correspondences end-to-end using a transformer-based model that predicts Gaussian splat textures in the fixed UV layout of a template mesh.
-                                    To achieve this, we introduce a novel registration-guided attention block, where each UV-map token attends exclusively to image tokens depicting its corresponding mesh region. This design improves efficiency and performance compared to dense cross-view attention.
-                                    MATCH outperforms existing methods in novel-view synthesis, geometry registration, and head avatar generation, while making avatar creation 10 times faster than the closest competing baseline.
+                                    Given calibrated multi-view images, MATCH infers static Gaussian splat textures in 0.5 seconds. The resulting Gaussians are in dense semantic correspondence across subjects and expressions. This allows for various applications such as editing, expression transfer, and fast avatar optimization.
                                     </p>
                                 <br>
                             </div>
@@ -122,25 +116,7 @@
                                 <h5 class="card-title">Joker: Conditional 3D Head Synthesis with Extreme Facial Expressions</h5>
                                 <p class="project-card-text"><small class="text-muted"><b><a href="./index.html" target="_blank">Malte Prinzler</a></b>, Egor Zakharov, Vanessa Slyarova, Berna Kabadayi, Justus Thies <br>3DV 2025</small></p>
                                 <a href="projects/joker/index.html" class="stretched-link hidden" target="_blank"></a>
-                                <p class="project-card-text">We introduce Joker, a new method for the conditional synthesis of 3D human heads with
-                                    extreme
-                                    expressions. Given a single reference image of a person, we synthesize a volumetric human
-                                    head
-                                    with the reference’s identity and a new expression. We offer control over the expression via
-                                    a
-                                    3D morphable model (3DMM) and textual inputs. This multi-modal conditioning signal is
-                                    essential
-                                    since 3DMMs alone fail to define subtle emotional changes and extreme expressions, including
-                                    those involving the mouth cavity and tongue articulation. Our method is built upon a 2D
-                                    diffusion-based prior that generalizes well to out-of-domain samples, such as sculptures,
-                                    heavy
-                                    makeup, and paintings while achieving high levels of expressiveness. To improve view
-                                    consistency, we propose a new 3D distillation technique that converts predictions of our 2D
-                                    prior into a neural radiance field (NeRF). Both the 2D prior and our distillation technique
-                                    produce state-of-the-art results, which are confirmed by our extensive evaluations. Also, to
-                                    the
-                                    best of our knowledge, our method is the first to achieve view-consistent extreme tongue
-                                    articulation.</p>
+                                <p class="project-card-text">Joker uses one reference image to generate a 3D reconstruction with a novel extreme expression. The target expression is defined through 3DMM parameters and text prompts. The text prompts effectively resolve ambiguities in the 3DMM input and can control emotion-related expression subtleties and tongue articulation.</p>
                                 <br>
                             </div>
                         </div>
@@ -161,8 +137,7 @@
                                 <p class="project-card-text"><small class="text-muted">Yiqian Wu, <b>Malte Prinzler</b>, Xiaogang Jin, Siyu Tang<br>Siggraph 2025</small></p>
                                 <a href="https://onethousandwu.com/animportrait3d.github.io/" class="stretched-link hidden" target="_blank"></a>
                                 <p class="project-card-text">
-                                    The generation of high-quality, animatable 3D head avatars from text has enormous potential in content creation applications such as games, movies, and embodied virtual assistants. Current text-to-3D generation methods typically combine parametric head models with 2D diffusion models using score distillation sampling to produce 3D-consistent results. However, they struggle to synthesize realistic details and suffer from misalignments between the appearance and the driving parametric model, resulting in unnatural animation results. We discovered that these limitations stem from ambiguities in the 2D diffusion predictions during 3D avatar distillation, specifically: (i) the avatar's appearance and geometry is underconstrained by the text input, and (ii) the semantic alignment between the predictions and the parametric head model is insufficient because the diffusion model is unaware of the parametric model.<br>
-                                    In this work, we propose a novel framework, AnimPortrait3D, for text-based realistic animatable 3DGS avatar generation with morphable model alignment, and introduce two key strategies to address these challenges. First, we tackle appearance and geometry ambiguities by utilizing prior information from a pretrained text-to-3D model to initialize a 3D avatar with robust appearance, geometry, and rigging relationships to the morphable model. Second, we refine the initial 3D avatar for dynamic expressions using a ControlNet that is conditioned on semantic and normal maps of the morphable model to ensure accurate alignment. As a result, our method outperforms existing approaches in terms of synthesis quality, alignment, and animation fidelity. Our experiments show that the proposed method advances the state of the art in text-based, animatable 3D head avatar generation.
+                                    AnimPortrait3D creates animatable 3D avatars from text descriptions, achieving realistic appearance and geometry while maintaining accurate alignment with the underlying parametric mesh. Prompt: "A 40-year-old gentleman with a chiseled jawline, slightly graying hair slicked back into a neat undercut, dressed in a navy pinstriped suit, a red tie complementing his fair complexion - confidently walking through a bustling city street".
                                 </p>
                                 <br>
                             </div>
@@ -183,13 +158,7 @@
                                 <h5 class="card-title">Im2Haircut: Single-view Strand-based Hair Reconstruction for Human Avatars</h5>
                                 <p class="project-card-text"><small class="text-muted">Vanessa Sklyarova, Egor Zakharov, <b>Malte Prinzler</b>, Giorgio Becherini, Michael Black, Justus Thies <br>ICCV 2025</small></p>
                                 <a href="https://im2haircut.is.tue.mpg.de/" class="stretched-link hidden" target="_blank"></a>
-                                <p class="project-card-text">We present a novel approach for 3D hair reconstruction from single photographs based on a global hair prior combined with local optimization. Capturing strand-based hair geometry from single photographs is challenging due to the variety and geometric complexity of hairstyles and the lack of ground truth training data. <br>
-
-                                    Classical reconstruction methods like multi-view stereo only reconstruct the visible hair strands, missing the inner structure of hairstyles and hampering realistic hair simulation. To address this, existing methods leverage hairstyle priors trained on synthetic data. Such data, however, is limited in both quantity and quality since it requires manual work from skilled artists to model the 3D hairstyles and create near-photorealistic renderings. <br>
-                                    
-                                    To overcome these limitations, we propose a novel approach that uses both real and synthetic data to learn an effective hairstyle prior. Specifically, we train a transformer-based prior model on synthetic data to obtain knowledge of the internal hairstyle geometry and introduce real data in the learning process to model the outer structure. This training scheme is able to model the visible hair strands depicted in an input image, while preserving the general 3D structure of hairstyles. <br>
-                                    
-                                    We exploit this prior to create a Gaussian-splatting-based reconstruction method that creates hairstyles from one or more images. Qualitative and quantitative comparisons with existing reconstruction pipelines demonstrate the effectiveness and superior performance of our method for capturing detailed hair orientation, overall silhouette, and backside consistency.</p>
+                                <p class="project-card-text">Given a single image, Im2Haircut generates high-quality, strand-based 3D hair geometry. Method consists of a prior hair geometry model trained on a mixture of synthetic and real data that is finetuned using the input image at inference time.</p>
                                 <br>
                             </div>
                         </div>
@@ -209,7 +178,7 @@
                                 <h5 class="card-title">3DiFACE: Synthesizing and Editing Holistic 3D Facial Animation</h5>
                                 <p class="project-card-text"><small class="text-muted">Balamurugan Thambiraja, <b>Malte Prinzler</b>, Sadegh Aliakbarian, Darren Cosker, Justus Thies <br>3DV 2025</small></p>
                                 <a href="https://balamuruganthambiraja.github.io/3DiFACE/" class="stretched-link hidden" target="_blank"></a>
-                                <p class="project-card-text">Creating an animation of a specific person with audio-synced lip motions, realistic head motion and editing via artist-defined keyframes are a set of tasks that challenge existing speech-driven 3D facial animation methods. Especially, editing 3D facial animation is a complex and time-consuming task carried out by highly skilled animators. Also, most existing works overlook the inherent one-to-many relationship between speech and facial motion, where multiple plausible lip and head animations could sync with the audio input. To this end, we present 3DiFACE, a novel method for holistic speech-driven 3D facial animation, which produces diverse plausible lip and head motions for a single audio input, while also allowing editing via keyframing and interpolation. 3DiFACE is a lightweight audio-conditioned diffusion model, which can be fine-tuned to generate personalized 3D facial animation requiring only a short video of the subject. Specifically, we leverage the viseme-level diversity in our training corpus to train a fully-convolutional diffusion model that produces diverse sequences for single audio input. Additionally, we employ a modified guided motion diffusion to enable head-motion synthesis and editing using masking. Through quantitative and qualitative evaluations, we demonstrate that our method is capable of generating and editing diverse holistic 3D facial animations given a single audio input, with control between high fidelity and diversity.</p>
+                                <p class="project-card-text">3DiFACE is a novel diffusion-based method for synthesizing and editing holistic 3D facial animation from an audio sequence, wherein one can synthesize a diverse set of facial animations (top), seamlessly edit facial animations between two or multiple user-specified keyframes, and extrapolating motion from past motion (bottom).</p>
                                 <br>
                             </div>
                         </div>
@@ -231,8 +200,9 @@
                                 <h5 class="card-title">DINER: Depth-aware Image-based NEural Radiance fields</h5>
                                 <p class="project-card-text"><small class="text-muted"><b>Malte Prinzler</b>, Otmar Hilliges, Justus Thies<br>CVPR 2023</small></p>
                                 <a href="projects/diner/diner.html" class="stretched-link hidden" target="_blank"></a>
-                                <p class="project-card-text">We present Depth-aware Image-based NEural Radiance fields (DINER). Given a sparse set of RGB input views, we predict depth and feature maps to guide the reconstruction of a volumetric scene representation that allows us to render 3D objects under novel views. Specifically, we propose novel techniques to incorporate depth information into feature fusion and efficient scene sampling. In comparison to the previous state of the art, DINER achieves higher synthesis quality and can process input views with greater disparity. This allows us to capture scenes more completely without changing capturing hardware requirements and ultimately enables larger viewpoint changes during novel view synthesis. We evaluate our method by synthesizing novel views, both for human heads and for general objects, and observe significantly improved qualitative results and increased perceptual metrics compared to the previous state of the art. The code
-                                    will be made publicly available for research purposes.</p>
+                                <p class="project-card-text">Based on sparse input views, we predict depth and feature maps to infer a volumetric scene representation in terms of a radiance
+                                    field which enables novel viewpoint synthesis. The depth information allows us to use input views with high relative distance such that the
+                                    scene can be captured more completely and with higher synthesis quality compared to previous state-of-the-art methods.</p>
                                 <br>
                             </div>
                         </div>
@@ -250,8 +220,7 @@
                                 <h5 class="card-title">Neural Head Avatars from Monocular RGB Videos</h5>
                                 <p class="project-card-text"><small class="text-muted">Philip-William Grassal<sup>*</sup>, <b>Malte Prinzler</b><sup>*</sup>, Titus Leistner, Carsten Rother, Matthias Nießner, Justus Thies (<sup>*</sup>equal contribution)<br>CVPR 2022</small></p>
                                 <a href="projects/neural_head_avatars/neural_head_avatars.html" class="stretched-link hidden" target="_blank"></a>
-                                <p class="project-card-text">We present Neural Head Avatars, a novel neural representation that explicitly models the surface geometry and appearance of an animatable human avatar that can be used for teleconferencing in AR/VR or other applications in the movie or games industry that rely on a digital human. Our representation can be learned from a monocular RGB portrait video that features a range of different expressions and views. Specifically, we propose a hybrid representation consisting of a morphable model for the coarse shape and expressions of the face, and two feed-forward networks, predicting vertex offsets of the underlying mesh as well as a view- and expression-dependent texture. We demonstrate that this representation is able to accurately extrapolate to unseen poses and view points, and generates natural expressions while providing sharp texture details. Compared to previous works on head avatars, our method provides a disentangled shape
-                                    and appearance model of the complete human head (including hair) that is compatible with the standard graphics pipeline. Moreover, it quantitatively and qualitatively outperforms current state of the art in terms of reconstruction quality and novel-view synthesis.</p>
+                                <p class="project-card-text">Given a monocular portrait video of a person, we reconstruct a Neural Head Avatar. Such a 4D avatar will be the foundation of applications like teleconferencing in VR/AR, since it enables novel-view synthesis and control over pose and expression.</p>
                                 <br>
                             </div>
                         </div>
@@ -268,7 +237,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Visual Fashion Attribute Prediction</h5>
                                 <a href="https://github.com/malteprinzler/VisualFashionAttributePrediction" class="stretched-link hidden" target="_blank"></a>
-                                <p class="project-card-text">Internship project on vision-based regression of descriptive features for apparel products. Given an image of a garment, a 2D convolutional network extracts scores for a predefined set of attributes. This allows for attribute-based product similarity matching and recommendation applications. This project was part of Kaggle iMaterialist Challenge (Fashion) at FCVC5. The code is publicly available through GitHub.</p>
+                                <p class="project-card-text">Internship project on vision-based regression of descriptive features for apparel products. Given an image of a garment, a 2D convolutional network extracts scores for a predefined set of attributes. This allows for attribute-based product similarity matching and recommendation applications. </p>
                                 <br>
                             </div>
                         </div>
@@ -300,7 +269,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Student Researcher</h5>
                                 <p class="card-text"><small class="text-muted">Google Zürich<br>Feb 2025 - August 2025 & Oct 2025 - Apr 2026 (12 months)</small></p>
-                                <p class="card-text">I joined the Syntec team within Android XR to work on the reconstruction and registration of photo-realistic 3D human heads from studio captures. Please refer to our <a href="projects/match/index.html">publication</a> paper for more details.</p>
+                                <p class="card-text">I joined the Syntec team within <a href='https://www.android.com/xr/' target="_blank">Android XR</a> to work on the reconstruction and registration of photo-realistic 3D human heads from studio captures. Please refer to our <a href="projects/match/index.html">publication</a> paper for more details.</p>
                             </div>
                         </div>
                     </div>
