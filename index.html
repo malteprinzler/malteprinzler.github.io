@@ -148,6 +148,75 @@
                 </div>
             </div>
 
+            <!-- AnimPortrait3D PROJECT -->
+            <div class="col">
+                <div class="card project-card mb-1">
+                    <div class="row g-0">
+                        <div class="col-5">
+                            <img src="assets/animportrait3d_teaser.jpg" class="img-fluid project-img">
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body">
+                                <h5 class="card-title">AnimPortrait3D: Text-based Animatable 3D Avatars with Morphable Model Alignment</h5>
+                                <p class="project-card-text"><small class="text-muted">Yiqian Wu, <b>Malte Prinzler</b>, Xiaogang Jin, Siyu Tang<br>Siggraph 2025</small></p>
+                                <a href="https://onethousandwu.com/animportrait3d.github.io/" class="stretched-link hidden" target="_blank"></a>
+                                <p class="project-card-text">
+                                    The generation of high-quality, animatable 3D head avatars from text has enormous potential in content creation applications such as games, movies, and embodied virtual assistants. Current text-to-3D generation methods typically combine parametric head models with 2D diffusion models using score distillation sampling to produce 3D-consistent results. However, they struggle to synthesize realistic details and suffer from misalignments between the appearance and the driving parametric model, resulting in unnatural animation results. We discovered that these limitations stem from ambiguities in the 2D diffusion predictions during 3D avatar distillation, specifically: (i) the avatar's appearance and geometry is underconstrained by the text input, and (ii) the semantic alignment between the predictions and the parametric head model is insufficient because the diffusion model is unaware of the parametric model.<br>
+                                    In this work, we propose a novel framework, AnimPortrait3D, for text-based realistic animatable 3DGS avatar generation with morphable model alignment, and introduce two key strategies to address these challenges. First, we tackle appearance and geometry ambiguities by utilizing prior information from a pretrained text-to-3D model to initialize a 3D avatar with robust appearance, geometry, and rigging relationships to the morphable model. Second, we refine the initial 3D avatar for dynamic expressions using a ControlNet that is conditioned on semantic and normal maps of the morphable model to ensure accurate alignment. As a result, our method outperforms existing approaches in terms of synthesis quality, alignment, and animation fidelity. Our experiments show that the proposed method advances the state of the art in text-based, animatable 3D head avatar generation.
+                                </p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Im2Haircut PROJECT -->
+            <div class="col">
+                <div class="card project-card mb-1">
+                    <div class="row g-0">
+                        <div class="col-5">
+                            <img src="assets/im2haircut_teaser.jpg" class="img-fluid project-img">
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body">
+                                <h5 class="card-title">Im2Haircut: Single-view Strand-based Hair Reconstruction for Human Avatars</h5>
+                                <p class="project-card-text"><small class="text-muted">Vanessa Sklyarova, Egor Zakharov, <b>Malte Prinzler</b>, Giorgio Becherini, Michael Black, Justus Thies <br>ICCV 2025</small></p>
+                                <a href="https://im2haircut.is.tue.mpg.de/" class="stretched-link hidden" target="_blank"></a>
+                                <p class="project-card-text">We present a novel approach for 3D hair reconstruction from single photographs based on a global hair prior combined with local optimization. Capturing strand-based hair geometry from single photographs is challenging due to the variety and geometric complexity of hairstyles and the lack of ground truth training data. <br>
+
+                                    Classical reconstruction methods like multi-view stereo only reconstruct the visible hair strands, missing the inner structure of hairstyles and hampering realistic hair simulation. To address this, existing methods leverage hairstyle priors trained on synthetic data. Such data, however, is limited in both quantity and quality since it requires manual work from skilled artists to model the 3D hairstyles and create near-photorealistic renderings. <br>
+                                    
+                                    To overcome these limitations, we propose a novel approach that uses both real and synthetic data to learn an effective hairstyle prior. Specifically, we train a transformer-based prior model on synthetic data to obtain knowledge of the internal hairstyle geometry and introduce real data in the learning process to model the outer structure. This training scheme is able to model the visible hair strands depicted in an input image, while preserving the general 3D structure of hairstyles. <br>
+                                    
+                                    We exploit this prior to create a Gaussian-splatting-based reconstruction method that creates hairstyles from one or more images. Qualitative and quantitative comparisons with existing reconstruction pipelines demonstrate the effectiveness and superior performance of our method for capturing detailed hair orientation, overall silhouette, and backside consistency.</p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3DiFACE PROJECT -->
+            <div class="col">
+                <div class="card project-card mb-1">
+                    <div class="row g-0">
+                        <div class="col-5">
+                            <img src="assets/3diface_teaser.jpg" class="img-fluid project-img">
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body">
+                                <h5 class="card-title">3DiFACE: Synthesizing and Editing Holistic 3D Facial Animation</h5>
+                                <p class="project-card-text"><small class="text-muted">Balamurugan Thambiraja, <b>Malte Prinzler</b>, Sadegh Aliakbarian, Darren Cosker, Justus Thies <br>3DV 2025</small></p>
+                                <a href="https://balamuruganthambiraja.github.io/3DiFACE/" class="stretched-link hidden" target="_blank"></a>
+                                <p class="project-card-text">Creating an animation of a specific person with audio-synced lip motions, realistic head motion and editing via artist-defined keyframes are a set of tasks that challenge existing speech-driven 3D facial animation methods. Especially, editing 3D facial animation is a complex and time-consuming task carried out by highly skilled animators. Also, most existing works overlook the inherent one-to-many relationship between speech and facial motion, where multiple plausible lip and head animations could sync with the audio input. To this end, we present 3DiFACE, a novel method for holistic speech-driven 3D facial animation, which produces diverse plausible lip and head motions for a single audio input, while also allowing editing via keyframing and interpolation. 3DiFACE is a lightweight audio-conditioned diffusion model, which can be fine-tuned to generate personalized 3D facial animation requiring only a short video of the subject. Specifically, we leverage the viseme-level diversity in our training corpus to train a fully-convolutional diffusion model that produces diverse sequences for single audio input. Additionally, we employ a modified guided motion diffusion to enable head-motion synthesis and editing using masking. Through quantitative and qualitative evaluations, we demonstrate that our method is capable of generating and editing diverse holistic 3D facial animations given a single audio input, with control between high fidelity and diversity.</p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+
             <!-- DINER PROJECT -->
             <div class="col">
                 <div class="card project-card mb-1" onmouseover="playDinerVideo()" onmouseleave="pauseDinerVideo()">
@@ -174,7 +243,7 @@
                 <div class="card project-card mb-1">
                     <div class="row g-0">
                         <div class="col-5">
-                            <img src="assets/NHA_teaser.jpg" class="img-fluid">
+                            <img src="assets/NHA_teaser.jpg" class="img-fluid project-img">
                         </div>
                         <div class="col-7">
                             <div class="card-body">
@@ -193,7 +262,7 @@
                 <div class="card project-card mb-1">
                     <div class="row g-0">
                         <div class="col-5">
-                            <img src="assets/fashion_attribute_pred_teaser.jpg" class="img-fluid">
+                            <img src="assets/fashion_attribute_pred_teaser.jpg" class="img-fluid project-img">
                         </div>
                         <div class="col-7">
                             <div class="card-body">
