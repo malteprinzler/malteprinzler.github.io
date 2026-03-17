@@ -132,6 +132,12 @@ a:hover {
     text-decoration: underline;
 }
 
+.match-publication-button {
+    /* Bulma normal button vertical padding (0.5em) + 2px. */
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
 .publication-video {
     position: relative;
     width: 100%;
